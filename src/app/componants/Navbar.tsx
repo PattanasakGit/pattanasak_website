@@ -5,9 +5,7 @@ import { useDarkModeState } from "@/store/Mode";
 
 const Navbar: React.FC = () => {
   const { isDarkMode, setIsDarkMode } = useDarkModeState();
-  // const bg_color = bgColor(isDarkMode);
-  // const text_color = textColor(isDarkMode);
-  const bg_color = isDarkMode ? "bg-[#00000080] " : "bg-[#ffffff80] ";;
+  const bg_color = isDarkMode ? "bg-[#00000080] " : "bg-[#ffffff80] ";
   const text_color = isDarkMode ? "white" : "black";
 
   const css_hover_btn = () => {    

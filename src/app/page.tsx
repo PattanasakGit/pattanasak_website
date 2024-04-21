@@ -1,15 +1,14 @@
-
 "use client"
 import { useDarkModeState } from "@/store/Mode";
-import Image from "next/image";
+import Home from "@/app/componants/Home"
 
-export default function Home() {
+export default function APP() {
   const { isDarkMode } = useDarkModeState();
-  const bg_color = isDarkMode ? "bg-[#000000] bg-opacity-[83%] backdrop-blur-[90px]" : "bg-[#ffffff80] backdrop-blur-[150px]";;
-  const text_color = isDarkMode ? "white" : "black";
-
+  const bg_color = isDarkMode ? "bg-[#000000] bg-opacity-[83%] backdrop-blur-[90px]" : "bg-[#ffffff80] backdrop-blur-[200px]";
+  
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${bg_color} `}>
+    <main className={`flex min-h-screen flex-col items-center justify-between pt-[13vh] ${bg_color} `}>
+      <Home />
     </main>
   );
 }
