@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  background-image: url('../../public/bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

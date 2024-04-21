@@ -1,15 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { IconSunMoon } from "@tabler/icons-react";
 import { useDarkModeState } from "@/store/Mode";
-import { bgColor , textColor} from "@/utils/changeColorMode"
 
 const Navbar: React.FC = () => {
   const { isDarkMode, setIsDarkMode } = useDarkModeState();
-  const bg_color = bgColor(isDarkMode);
-  const text_color = textColor(isDarkMode);
+  // const bg_color = bgColor(isDarkMode);
+  // const text_color = textColor(isDarkMode);
+  const bg_color = isDarkMode ? "bg-[#00000080] " : "bg-[#ffffff80] ";;
+  const text_color = isDarkMode ? "white" : "black";
 
-  const css_hover_btn = () => {
+  const css_hover_btn = () => {    
     const css_light_mode = "hover:bg-[#E8EFCF] p-3 rounded-[100px]";
     const css_dark_mode = "hover:bg-[#FFBB70] p-3 rounded-[100px] text-white";
     return isDarkMode ? css_dark_mode : css_light_mode;
@@ -26,7 +27,7 @@ const Navbar: React.FC = () => {
         <button className={css_hover_btn()}> CONTACT </button>
       </div>
       <button
-        className={`${bg_color} backdrop-blur-[10px] border-[1px] border-gray-400 shadow-xl w-[65px] h-[65px] flex items-center justify-center rounded-[1000px]`}
+        className={`${bg_color}  backdrop-blur-[10px] border-[1px] border-gray-400 shadow-xl w-[65px] h-[65px] flex items-center justify-center rounded-[1000px]`}
         onClick={() => setIsDarkMode(!isDarkMode)}
       >
         <IconSunMoon stroke={2} className={`text-${text_color}`} />
