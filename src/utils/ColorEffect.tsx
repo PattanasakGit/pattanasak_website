@@ -19,8 +19,12 @@ export const TopicEffect: React.FC<ITextEffectProps> = ({ text, className }) => 
 
 export const CustomText: React.FC<ICustomText> = ({ className, children }) => {
   const { isDarkMode } = useDarkModeState();
+  const text_Color = () => {
+    return isDarkMode ? '#dcdedc' : '#333333';
+  };
+  
   return (
-    <span className={`${className} ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+    <span className={`${className}`} style={{color:text_Color()}}>
       {children}
     </span>
   );
