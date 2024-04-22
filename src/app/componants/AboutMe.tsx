@@ -1,10 +1,10 @@
 import React from "react";
-import { CustomText, TopicEffect } from "@/utils/ColorEffect";
+import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { IconDownload } from '@tabler/icons-react';
 
 const AboutMe: React.FC = () => {
     return(
-        <div className="pt-3 p-8 rounded-[50px] border w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4 border-yellow-400">
+        <BGEffect className="pt-3 p-8 rounded-[50px] border w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4 border-yellow-400 bg-red-600">
             <TopicEffect className="text-[40px]" > ABOUT ME </TopicEffect>
             <CustomText className="text-[20px] font-semibold my-4"> {'< A Software Developer Passionate About Creation >'} </CustomText>
             <div className="flex flex-col md:flex-row my-10">
@@ -21,7 +21,7 @@ const AboutMe: React.FC = () => {
                 <div className="w-full md:w-[35%] text-white px-4 py-2 flex flex-col items-center">
                     <img src={"avatar.gif"} alt="avatar" className={` w-auto h-auto`}/>
                     <button 
-                        className="flex bg-orange-500 py-4 px-6 my-8 rounded-2xl border border-gray-400 hover:bg-orange-600"
+                        className="flex justify-center bg-orange-500 py-4 my-8 w-[90%] rounded-2xl border border-gray-400 hover:bg-orange-600"
                     >
                         <IconDownload stroke={2} className="mx-2"/>
                         Download CV
@@ -29,9 +29,7 @@ const AboutMe: React.FC = () => {
                 </div>
                 
             </div>
-
-
-        </div>
+        </BGEffect>
     );
 };
 

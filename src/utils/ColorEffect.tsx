@@ -29,3 +29,16 @@ export const CustomText: React.FC<ICustomText> = ({ className, children }) => {
     </p>
   );
 };
+
+export const BGEffect: React.FC<ICustomText> = ({ className, children }) => {
+  const { isDarkMode } = useDarkModeState();
+  const bg_Color = () => {
+    return isDarkMode ? '#00000050' : '#FFFFFF';
+  };
+  
+  return (
+    <div className={`${className} shadow-lg`} style={{backgroundColor:bg_Color()}}>
+        {children}
+    </div>
+  );
+};
