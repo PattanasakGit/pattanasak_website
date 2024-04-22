@@ -1,31 +1,31 @@
 import React from "react";
 import { useDarkModeState } from "@/store/Mode";
 
-export const TopicEffect: React.FC<ITextEffectProps> = ({ text, className }) => (
+export const TopicEffect: React.FC<ITextEffectProps> = ({ className , children}) => (
   <h1
     className={`bg-cover bg-no-repeat ${className}`}
     style={{
-      fontSize: "60px",
+      // fontSize: "60px",
       // fontFamily: "font-family: 'IBM Plex Sans Thai', sans-serif !important;",
-      fontWeight: 900,
+      fontWeight: 800,
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundImage: "url('https://media.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif')",
     }}
   >
-    {text}
+    {children}
   </h1>
 );
 
 export const CustomText: React.FC<ICustomText> = ({ className, children }) => {
   const { isDarkMode } = useDarkModeState();
   const text_Color = () => {
-    return isDarkMode ? '#dcdedc' : '#333333';
+    return isDarkMode ? '#d9d9d9' : '#696969';
   };
   
   return (
-    <span className={`${className}`} style={{color:text_Color()}}>
+    <p className={`${className}`} style={{color:text_Color()}}>
       {children}
-    </span>
+    </p>
   );
 };

@@ -1,6 +1,7 @@
 "use client"
 import { useDarkModeState } from "@/store/Mode";
 import Home from "@/app/componants/Home"
+import AboutMe from "./componants/AboutMe";
 
 export default function APP() {
   const { isDarkMode } = useDarkModeState();
@@ -9,6 +10,8 @@ export default function APP() {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between pt-[13vh] ${bg_color} `}>
       <Home />
+      <AboutMe />
+      
     </main>
   );
 }

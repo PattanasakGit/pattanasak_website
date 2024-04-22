@@ -1,6 +1,6 @@
 interface ITextEffectProps {
-    text: string;
     className?: string;
+    children?: React.ReactNode;
 }
 
 interface ICustomText {

@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="h-[70px] flex justify-center items-center w-screen mt-8 fixed top-0 z-[1000]">
-      <img src={"avatar.gif"} alt="avatar" className={`${bg_color} backdrop-blur-[10px] border-[1px] border-gray-400 shadow-xl0 w-[65px] h-[65px] rounded-[500px]`}/>
+      <img src={"avatar.gif"} alt="avatar" className={`${bg_color} backdrop-blur-[10px] border-[1px] border-gray-400 shadow-xl w-[65px] h-[65px] rounded-[500px]`}/>
       <div className={`${bg_color} backdrop-blur-[10px] flex justify-between w-1/2 p-2 rounded-[100px] mx-8 border-[1px] border-gray-400 shadow-xl `} >
         <button className={css_hover_btn()}> ABOUT ME </button>
         <button className={css_hover_btn()}> MY PROJECT </button>

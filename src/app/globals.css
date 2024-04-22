@@ -11,7 +11,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  letter-spacing: -0.05em;
+  /* white-space: pre-wrap !important; */
+  /* letter-spacing: -0.1em; */
   /* font-family: "IBM Plex Sans Thai", sans-serif !important; */
   /* font-family: "font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' " !important;  */
 }
