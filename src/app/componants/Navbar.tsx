@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
         <button className={css_hover_btn()}> ABOUT ME </button>
         <button className={css_hover_btn()}> MY PROJECT </button>
         <button className={css_hover_btn()}> SKILLS </button>
-        <button className={css_hover_btn()}> EXPERIENCE </button>
+        {/* <button className={css_hover_btn()}> EXPERIENCE </button> */}
         <button className={css_hover_btn()}> CONTACT </button>
       </div>
       <button

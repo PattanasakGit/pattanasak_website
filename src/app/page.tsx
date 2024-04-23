@@ -2,6 +2,10 @@
 import { useDarkModeState } from "@/store/Mode";
 import Home from "@/app/componants/Home"
 import AboutMe from "./componants/AboutMe";
+import Skills from "./componants/Skills";
+import Exexperience from "./componants/Exexperience";
+import Projects from "./componants/Projects";
+import Contact from "./componants/Contact";
 
 export default function APP() {
   const { isDarkMode } = useDarkModeState();
@@ -11,6 +15,11 @@ export default function APP() {
     <main className={`flex min-h-screen flex-col items-center justify-between pt-[13vh] ${bg_color} `}>
       <Home />
       <AboutMe />
+      <Projects />
+      <Skills />
+      <Contact />
+      
+      {/* <Exexperience /> */}
       
     </main>
   );
