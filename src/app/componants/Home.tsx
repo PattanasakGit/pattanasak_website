@@ -3,7 +3,7 @@ import React from "react";
 
 const Home: React.FC = () => {
     return (
-        <div className="w-full h-[87vh] pt-10 grid grid-cols-1 place-items-center place-content-start">
+        <div className="w-full pt-10 grid grid-cols-1 place-items-center place-content-start">
             <img src="profile.jpg" alt="profile image" className="object-cover rounded-[150px] h-[250px] w-[400px] mb-2" />
             <TopicEffect className="my-8 text-[60px]"> I’m  Pattanasak </TopicEffect>
             <CustomText className="text-[30px] font-bold mb-4">  {'< Software developer >'} </CustomText>
