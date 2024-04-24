@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import { useDarkModeState } from "@/store/DarkModeState";
 import { IconSunMoon } from "@tabler/icons-react";
-import { useDarkModeState } from "@/store/Mode";
+import React from "react";
 import { Link } from 'react-scroll';
 
 const Navbar: React.FC = () => {

@@ -1,5 +1,5 @@
+import { useDarkModeState } from "@/store/DarkModeState";
 import React from "react";
-import { useDarkModeState } from "@/store/Mode";
 
 export const TopicEffect: React.FC<ITextEffectProps> = ({ className , children}) => {
   const backgroundImageUrl = "https://media.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif";

@@ -18,7 +18,6 @@ const Project: React.FC = () => {
             <TopicEffect className="text-[35px]" > PROJECTS </TopicEffect>
             <div>
                 <Carousel images={images} />
-                <Carousel images={images} />
             </div>
         </div>
     );

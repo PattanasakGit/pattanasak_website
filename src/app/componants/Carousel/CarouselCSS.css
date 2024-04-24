@@ -1,11 +1,9 @@
-.CarouselStyle {
+/* .CarouselStyle {
     margin-top: 100px ;
-    /* background: #9b9b9b18; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
 }
 
 .CarouselStyle_IMG {
@@ -35,6 +33,96 @@
     margin: 0 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.3);
+    z-index: 1;
+}
+
+
+
+
+
+
+.CarouselStyle_BTN{
+    padding: 8px;
+    border-radius: 20px;
+    display: flex;
+    margin: 30px 0;
+    background-color: #946e0528;
+}
+.CarouselStyle button {
+    padding: 10px 15px;
+    margin: 0 1px;
+    border: none;
+    border-radius: 50%;
+    background-color: #495d4a53;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.CarouselStyle button:hover {
+    background-color: #555;
+} */
+
+
+
+
+
+
+
+
+
+
+
+.CarouselStyle {
+    margin-top: 100px ;
+    /* background: #9b9b9b18; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    perspective: 1000px;
+}
+
+.CarouselStyle_IMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    perspective: 1000px; /* กำหนด perspective สำหรับลักษณะ 3 มิติ */
+  }
+  
+  .CarouselStyle img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    flex-shrink: 0;
+  }
+  
+.nextImg {
+    width: 10vw !important;
+    filter: blur(0px);
+    opacity: 0.6;
+    transform: rotateY(-40deg) scale(0.8);
+    z-index: 0;
+}
+.prevImg {
+    width: 10vw !important;
+    filter: blur(0px);
+    opacity: 0.6;
+    transform: rotateY(40deg) scale(0.8);
+    z-index: 0;
+}
+.nextImg:hover,
+.prevImg:hover
+{opacity: 1;}
+
+.currentImg {
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
