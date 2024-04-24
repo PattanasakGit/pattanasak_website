@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './CarouselCSS.css';
 
-
 interface CarouselProps {
   images: string[];
   autoPlayInterval?: number;
