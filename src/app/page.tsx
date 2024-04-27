@@ -3,7 +3,7 @@ import Home from "@/app/componants/Home";
 import { useDarkModeState } from "@/store/DarkModeState";
 import AboutMe from "./componants/AboutMe";
 import Contact from "./componants/Contact";
-import Projects from "./componants/Projects";
+import Projects from "./componants/Projects/Projects";
 import Skills from "./componants/Skills";
 
 import { Element } from 'react-scroll';
