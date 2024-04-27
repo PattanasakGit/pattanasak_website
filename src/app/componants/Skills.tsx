@@ -2,9 +2,8 @@ import React from "react";
 import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
 
 const Skills: React.FC = () => {
-    const mySkills = ["React", "Next.js", "Tailwind CSS", "Figma", "Express.js", "Node.js", "SQL", "MongoDB", "Docker", "JavaScript", "TypeScript", "GitHub", "GitLab", "Jira", "Scrum"];
+    const mySkills = ["React", "Next.js", "Tailwind", "CSS", "Figma", "Express.js", "Node.js", "SQL", "MongoDB", "Docker", "JavaScript", "TypeScript", "GitHub", "GitLab", "Jira", "Scrum"];
 
-    // ฟังก์ชันสำหรับสุ่มสีพาสเทล
     const getRandomPastelColor = () => {
         const letters = 'BCDEF';
         let color = '#';
