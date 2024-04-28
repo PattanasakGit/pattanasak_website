@@ -1,6 +1,7 @@
 import React from "react";
 import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { IconDownload } from '@tabler/icons-react';
+import Image from 'next/image'
 
 const AboutMe: React.FC = () => {
     return(
@@ -19,7 +20,7 @@ const AboutMe: React.FC = () => {
                     <hr className="h-[2px] bg-yellow-400 border-none rounded-xl mt-[3vw]" />
                 </div>
                 <div className="w-full md:w-[35%] text-white px-4 py-2 flex flex-col items-center">
-                    <img src={"avatar.gif"} alt="avatar" className={` w-auto h-auto`}/>
+                    <Image src={"/avatar/hello.gif"} alt="avatar" height={300} width={300} className="mt-[-2vw]"/>
                     <button 
                         className="flex justify-center bg-orange-500 py-4 my-8 w-[90%] rounded-2xl border border-gray-400 hover:bg-orange-600"
                     >
