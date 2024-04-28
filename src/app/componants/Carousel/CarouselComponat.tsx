@@ -1,48 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import './CarouselCSS.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
-interface CarouselProps {
-  images: string[];
-  autoPlayInterval?: number;
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./styles.css";
+
+interface Props { 
+  slides: string[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 5000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [prevIndex, setPrevIndex] = useState(images.length - 1);
-  const [nextIndex, setNextIndex] = useState(1);
-
-  useEffect(() => {
-    setPrevIndex((currentIndex - 1 + images.length) % images.length);
-    setNextIndex((currentIndex + 1) % images.length);
-
-    const autoPlayIntervalId: NodeJS.Timeout = setInterval(() => {
-      goToNext();
-    }, autoPlayInterval);
-
-    return () => clearInterval(autoPlayIntervalId);
-  }, [currentIndex, images.length, autoPlayInterval]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  };
-
+function Carousel({ slides }: Props) {
   return (
-    <div className="CarouselStyle">
-      <div className="CarouselStyle_IMG">
-        <img src={images[prevIndex]} alt="Carousel" className="prevImg" onClick={e=>{goToPrevious()}} />
-        <img src={images[currentIndex]} alt="Carousel" className="currentImg" />
-        <img src={images[nextIndex]} alt="Carousel" className="nextImg" onClick={e=>{goToNext()}} />
-      </div>
-      <div className="CarouselStyle_BTN">
-        <button onClick={goToPrevious}>{'<-'}</button>
-        <button onClick={goToNext}>{'->'}</button>
-      </div>
+    <div className="Carousel-Cover">
+      <Swiper
+        modules={[EffectCoverflow, Navigation, Pagination]}
+        // modules={[EffectCoverflow, Navigation]}
+        navigation={{
+          prevEl: ".button-prev",
+          nextEl: ".button-next",
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        speed={1000}
+        slidesPerView={"auto"}
+        loop={true}
+        centeredSlides
+        effect={"coverflow"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 50,
+          modifier: 1,
+          slideShadows: true,
+        }}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="slide-inner">
+            <img src={slide} alt="" className="SwiperSlide-img"/>
+          </SwiperSlide>
+        ))}
+        <div className="CarouselStyle_BTN">
+          <button className="button-prev ">{'<-'}</button>
+          <button className="button-next ">{'->'}</button>
+        </div>
+      </Swiper>
     </div>
   );
-};
+}
 
 export default Carousel;
