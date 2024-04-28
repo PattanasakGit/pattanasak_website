@@ -1,9 +1,10 @@
 
 export const ProjectData:IProjectData = {
     YAKKAI:{
-        name: 'YAKKAI',
+        name: 'YAKKAI ONLINE',
         description: 'YAKKAI ONLINE is a feature-rich platform that allows sellers to advertise their products. It provides comprehensive tools for user convenience. Interested buyers can directly contact sellers to view and purchase products without any transactions or commissions on the website.',
         images: [
+            'project_img/Yakkai/logo.png',
             'project_img/Yakkai/0.png',
             'project_img/Yakkai/1.png',
             'project_img/Yakkai/2.png',
@@ -36,6 +37,7 @@ export const ProjectData:IProjectData = {
         description: 'CATCHAT is a website that allows you to chat with an AI. You can select different cat personas to converse with: Project for practice using the Next/Gemini API.',
         images: [
             'project_img/CATCHAT/0.png',
+            'project_img/CATCHAT/cat.gif',
             'project_img/CATCHAT/1.png',
             'project_img/CATCHAT/2.png',
             'project_img/CATCHAT/3.png',
@@ -52,7 +54,7 @@ export const ProjectData:IProjectData = {
         github: "https://github.com/PattanasakGit/CatChat"
     },
     HELPDESK:{
-        name: 'helpdesk ticket',
+        name: 'HELPDESK TICKET',
         description: 'helpdesk support ticket management application : A website demo for managing repair tickets or support requests.',
         images: [
             'project_img/Ticket/0.png',

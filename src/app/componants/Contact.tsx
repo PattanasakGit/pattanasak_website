@@ -5,7 +5,7 @@ import { IconMail } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import Image from 'next/image'
 
-const CustomBTN = 'w-64 h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.2]'
+const CustomBTN = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.2]'
 
 const Contact: React.FC = () => {
     const hendleClickEmail = () => {
@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap items-center  md:w-[60%] gap-4 py-[5vw]">
+        <div className="flex flex-wrap items-center justify-center gap-8 py-[5vw]">
           <button className={CustomBTN} onClick={hendleClickEmail}>
             <CustomText>
                 <IconMail stroke={1.5} size={100}/>
