@@ -2,6 +2,7 @@ import { CustomText, TopicEffect } from "@/utils/ColorEffect";
 import React from "react";
 import Image from 'next/image'
 import { IconBrandGithub } from '@tabler/icons-react';
+import Typewriter from 'react-ts-typewriter';
 
 const Home: React.FC = () => {
     const CustomBTN = 'w-[100px] h-[30px] p-8 bg-[#ffffff05] rounded-[50px]  border-[#c6af71] flex justify-center items-center  hover:scale-[1.2] shadow-[5px_5px_20px_0px_rgba(0,0,0,0.1)]';
@@ -19,9 +20,13 @@ const Home: React.FC = () => {
         />
         <TopicEffect className="my-8 text-[60px]"> I’m Pattanasak </TopicEffect>
         <CustomText className="text-[30px] font-bold mb-4">
-          {" "}
-          {"< Software developer >"}{" "}
-        </CustomText>
+          <Typewriter
+            text={['< Software developer >', '< Frontend developer >','< Fullstack developer >']}
+            speed={150}
+            cursor={true}
+            loop={true}
+          />
+       </CustomText>
         {/* <CustomText className="text-[17px] w-[80%] sm:w-[70%] md:w-[65%] lg:w-[50%] xl:w-[45%]"> 
                 &emsp;&emsp;"My main job is to translate ideas into vibrant code, in order to deliver the bestpossible experience to every user. Creating programs and websites that meet users' needs is what brings me immense happiness and pride. "
             </CustomText> */}
