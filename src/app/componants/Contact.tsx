@@ -5,7 +5,7 @@ import { IconMail } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import Image from 'next/image'
 
-const CustomBTN = 'w-64 h-32 p-8 bg-[#ffffff22] rounded-3xl border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.2]'
+const CustomBTN = 'w-64 h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.2]'
 
 const Contact: React.FC = () => {
     const hendleClickEmail = () => {
