@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         <TopicEffect className="my-8 text-[60px]"> I’m Pattanasak </TopicEffect>
         <CustomText className="text-[30px] font-bold mb-4">
           <Typewriter
-            text={['< Software developer >', '< Frontend developer >','< Fullstack developer >']}
+            text={['< Web developer >', '< Frontend developer >','< Fullstack developer >']}
             speed={150}
             cursor={true}
             loop={true}
