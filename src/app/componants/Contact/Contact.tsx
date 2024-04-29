@@ -3,15 +3,16 @@ import { CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { IconMail } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import Image from 'next/image'
+import { Data } from "@/store/Data";
 
 const CustomBTN = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.1]'
 
 const Contact: React.FC = () => {
     const hendleClickEmail = () => {
-        window.open(`mailto:putjat145@gmail.com`);
+        window.open(Data.links.mail_url);
     }
     const hendleClickIngedin = () => {
-        window.open("https://www.linkedin.com/in/pattanasak-atakul-353025287/", "_blank");
+        window.open(Data.links.linkedin_url, "_blank");
     }
   return (
     <div className="pt-3 p-8 rounded-[50px] w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4">

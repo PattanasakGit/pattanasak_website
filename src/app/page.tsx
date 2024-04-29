@@ -29,10 +29,7 @@ export default function APP() {
       </Element>
       <Element name="contact" className={ElementStyles}>
         <Contact />
-      </Element>
-      
-      {/* <Exexperience /> */}
-      
+      </Element>    
     </main>
   );
 }
