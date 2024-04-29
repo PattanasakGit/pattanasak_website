@@ -21,15 +21,12 @@ const Home: React.FC = () => {
         <TopicEffect className="my-8 text-[60px]"> I’m Pattanasak </TopicEffect>
         <CustomText className="text-[30px] font-bold mb-4">
           <Typewriter
-            text={['< Web developer >', '< Frontend developer >','< Fullstack developer >']}
+            text={['< Software developer >', '< Frontend developer >','< Fullstack developer >']}
             speed={150}
             cursor={true}
             loop={true}
           />
        </CustomText>
-        {/* <CustomText className="text-[17px] w-[80%] sm:w-[70%] md:w-[65%] lg:w-[50%] xl:w-[45%]"> 
-                &emsp;&emsp;"My main job is to translate ideas into vibrant code, in order to deliver the bestpossible experience to every user. Creating programs and websites that meet users' needs is what brings me immense happiness and pride. "
-            </CustomText> */}
         <div className="flex flex-wrap items-center justify-center  md:w-[60%] gap-4 my-8"> 
           <button className={CustomBTN} onClick={hendleClickGithub}>
             <CustomText>

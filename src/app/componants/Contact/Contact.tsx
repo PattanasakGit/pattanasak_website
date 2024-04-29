@@ -1,11 +1,10 @@
 import React from "react";
-import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
-import { IconDownload } from '@tabler/icons-react';
+import { CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { IconMail } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import Image from 'next/image'
 
-const CustomBTN = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.2]'
+const CustomBTN = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.1]'
 
 const Contact: React.FC = () => {
     const hendleClickEmail = () => {
@@ -24,6 +23,7 @@ const Contact: React.FC = () => {
               src="/avatar/onefing.gif"
               alt="avatar"
               layout="fill"
+              sizes="auto"
               objectFit="contain"
             />
           </div>

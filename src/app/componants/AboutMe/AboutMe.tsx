@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const AboutMe: React.FC = () => {
     return(
-        <BGEffect className="pt-3 p-8 rounded-[50px]  w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4 bg-red-600">
+        <BGEffect className="pt-3 p-8 rounded-[50px]  w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4">
             <TopicEffect className="text-[35px]" > ABOUT ME </TopicEffect>
             <CustomText className="text-[20px] font-semibold my-4"> {'< A Software Developer Passionate About Creation >'} </CustomText>
             <div className="flex flex-col md:flex-row my-10">

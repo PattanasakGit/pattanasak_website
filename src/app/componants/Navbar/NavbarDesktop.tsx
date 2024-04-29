@@ -1,4 +1,3 @@
-"use client";
 import { useDarkModeState } from "@/store/DarkModeState";
 import { IconSunMoon } from "@tabler/icons-react";
 import React from "react";

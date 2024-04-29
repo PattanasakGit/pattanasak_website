@@ -12,7 +12,7 @@ export const TopicEffect: React.FC<ITextEffectProps> = ({ className , children})
         fontWeight: 800,
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
-        backgroundImage: `url('${backgroundImageUrl || defaultBackground}')`, // ใช้รูปภาพจริงหรือใช้ default background ตามเงื่อนไข
+        backgroundImage: `url('${backgroundImageUrl || defaultBackground}')`,
       }}
     >
       {children}

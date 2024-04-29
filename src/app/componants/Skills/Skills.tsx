@@ -1,17 +1,11 @@
 import React from "react";
 import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
+import { getRandomPastelColor } from "@/utils/RandomColor";
 
 const Skills: React.FC = () => {
-    const mySkills = ["React", "Next.js", "Tailwind", "CSS", "Figma", "Express.js", "Node.js", "SQL", "MongoDB", "Docker", "JavaScript", "TypeScript", "GitHub", "Jira", "Scrum", "Postman"];
-
-    const getRandomPastelColor = () => {
-        const letters = 'BCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * letters.length)];
-        }
-        return color+'60';
-    };
+    const mySkills = [
+        "React", "Next.js", "Tailwind", "CSS", "HTML", "JavaScript", "TypeScript", "Node.js", "Figma", "Express.js", "SQL", "MongoDB"
+        , "Docker", "GitHub", "Scrum", "Postman"];
 
     return(
         <BGEffect className="pt-3 p-8 rounded-[50px] w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4">
