@@ -7,7 +7,7 @@ export const TopicEffect: React.FC<ITextEffectProps> = ({ className , children})
 
   return (
     <h1
-      className={`text-center md:text-left bg-cover bg-no-repeat ${className}`}
+      className={`bg-cover bg-no-repeat ${className}`}
       style={{
         fontWeight: 800,
         WebkitBackgroundClip: "text",

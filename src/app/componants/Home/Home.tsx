@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           height={200}
           className="rounded-[150px]"
         />
-        <TopicEffect className="my-10 text-[60px]"> I’m Pattanasak </TopicEffect>
+        <TopicEffect className="text-center md:text-left my-10 text-[60px]"> I’m Pattanasak </TopicEffect>
         <CustomText className="text-[30px] font-bold mb-4">
           <Typewriter
             text={['< Software developer >', '< Frontend developer >','< Fullstack developer >']}

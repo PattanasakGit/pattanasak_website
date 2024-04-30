@@ -2,11 +2,12 @@ import React from "react";
 import { BGEffect, CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { IconDownload } from '@tabler/icons-react';
 import Image from 'next/image'
+import { Data } from "@/store/Data";
 
 const AboutMe: React.FC = () => {
     return(
         <BGEffect className="pt-3 p-8 rounded-[50px]  w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4">
-            <TopicEffect className="text-[35px]" > ABOUT ME </TopicEffect>
+            <TopicEffect className="text-center md:text-left text-[35px]" > ABOUT ME </TopicEffect>
             <CustomText className="text-[20px] font-semibold my-4"> {'< A Software Developer Passionate About Creation >'} </CustomText>
             <div className="flex flex-col md:flex-row my-10">
                 <div className="w-full md:w-[65%] px-4 py-2">
@@ -23,6 +24,7 @@ const AboutMe: React.FC = () => {
                     <Image src={"/avatar/hello.gif"} alt="avatar" height={300} width={300} className="mt-[-2vw]"/>
                     <button 
                         className="flex justify-center bg-orange-500 py-4 my-8 w-[90%] rounded-2xl border border-gray-400 hover:bg-orange-600"
+                        onClick={() => window.open(Data.links.download_url , '_blank')}
                     >
                         <IconDownload stroke={2} className="mx-2"/>
                         Download CV

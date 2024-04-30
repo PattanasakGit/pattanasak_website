@@ -45,6 +45,7 @@ function Carousel({ slides }: Props) {
               width={450}
               height={300}
               className="SwiperSlide-img"
+              onClick={()=>window.open(slide, '_blank') }
             />
           </SwiperSlide>
         ))}

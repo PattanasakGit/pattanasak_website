@@ -19,7 +19,6 @@ const Footer: React.FC = () => {
 
   const handleIconClick = (url: string) => {
     window.open(url, '_blank');
-    console.log(" this is click ", url);
   }
 
   return (
