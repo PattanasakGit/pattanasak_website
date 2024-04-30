@@ -5,7 +5,7 @@ import { IconBrandGithub } from '@tabler/icons-react';
 import Typewriter from 'react-ts-typewriter';
 
 const Home: React.FC = () => {
-    const CustomBTN = 'w-[100px] h-[30px] p-8 bg-[#ffffff05] rounded-[50px]  border-[#c6af71] flex justify-center items-center  hover:scale-[1.2] shadow-[5px_5px_20px_0px_rgba(0,0,0,0.1)]';
+    const CustomBTN = 'w-[100px] h-[25px] px-8 py-7 bg-[#ffffff05] rounded-[50px]  border-[#c6af71] flex justify-center items-center  hover:scale-[1.2] shadow-[5px_5px_20px_0px_rgba(0,0,0,0.1)]';
     const hendleClickGithub = () => {
         window.open("https://github.com/PattanasakGit", "_blank");
     }
@@ -27,10 +27,10 @@ const Home: React.FC = () => {
             loop={true}
           />
        </CustomText>
-        <div className="flex flex-wrap items-center justify-center  md:w-[60%] gap-4 my-8"> 
+        <div className=" my-12"> 
           <button className={CustomBTN} onClick={hendleClickGithub}>
             <CustomText>
-                <IconBrandGithub stroke={2} size={50}/>  
+                <IconBrandGithub stroke={1.5} size={45}/>  
             </CustomText>
           </button>
         </div>
