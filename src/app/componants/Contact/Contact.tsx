@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
       <TopicEffect className="text-center md:text-left text-[35px] ">CONTACT</TopicEffect>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         <div className="flex justify-center items-center">
-          <div className="relative w-full max-w-md h-full min-h-[200px] mt-8">
+          <div className="relative w-full max-w-md h-[60%] min-h-[200px] mt-8">
             <Image
               src="/avatar/onefing.gif"
               alt="avatar"
