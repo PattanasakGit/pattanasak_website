@@ -4,6 +4,7 @@ import { getRandomPastelColor } from "@/utils/RandomColor";
 import { useDarkModeState } from "@/store/DarkModeState";
 
 const Skills: React.FC = () => {
+    const isDarkMode = useDarkModeState().isDarkMode;
     const mySkills = [
         "React", "Next.js", "Tailwind", "CSS", "HTML", "JavaScript", "TypeScript", "Node.js", "Figma", "Express.js", "SQL", "MongoDB"
         , "Docker", "GitHub", "Scrum", "Postman"];
@@ -13,7 +14,7 @@ const Skills: React.FC = () => {
             <TopicEffect className="text-[35px]">SKILLS</TopicEffect>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
                 {mySkills.map((skill, index) => (
-                    <div key={index} className="rounded-3xl p-4 shadow-xl" style={{ backgroundColor: getRandomPastelColor(useDarkModeState()) }}>
+                    <div key={index} className="rounded-3xl p-4 shadow-xl" style={{ backgroundColor: getRandomPastelColor(isDarkMode) }}>
                         <CustomText className="text-lg font-semibold text-center ">{skill}</CustomText>
                     </div>
                 ))}
