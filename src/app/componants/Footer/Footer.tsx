@@ -23,22 +23,22 @@ const Footer: React.FC = () => {
 
   return (
     <div className={`w-full h-32 ${bgColor} flex justify-center items-center px-1/2 shadow-[10px_0px_5px_0px_rgba(0,0,0,1)]`}>
-      <button className={btnStyle} onClick={() => handleIconClick(Data.links.github_url)}>
+      <button name='btn-github' className={btnStyle} onClick={() => handleIconClick(Data.links.github_url)}>
         <CustomText>
           <IconBrandGithub />
         </CustomText>
       </button>
-      <button className={btnStyle} onClick={() => handleIconClick(Data.links.download_url)}>
+      <button name='btn-resume-in-footer' className={btnStyle} onClick={() => handleIconClick(Data.links.download_url)}>
         <CustomText>
           <IconDownload />
         </CustomText>
       </button>
-      <button className={btnStyle} onClick={() => handleIconClick(Data.links.mail_url)}>
+      <button name='btn-email-in-footer' className={btnStyle} onClick={() => handleIconClick(Data.links.mail_url)}>
         <CustomText>
           <IconMail />
         </CustomText>
       </button>
-      <button className={btnStyle} onClick={() => handleIconClick(Data.links.linkedin_url)}>
+      <button name='btn-linkedin-in-footer' className={btnStyle} onClick={() => handleIconClick(Data.links.linkedin_url)}>
         <CustomText>
           <IconBrandLinkedin />
         </CustomText>

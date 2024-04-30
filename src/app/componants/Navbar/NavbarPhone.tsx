@@ -25,6 +25,7 @@ const NavbarPhone: React.FC = () => {
   return (
     <div className="h-[70px] flex justify-center items-center w-full mt-8 fixed top-0 z-[1000]">
       <button 
+        name='btn-open-modal'
         className={`${bg_color}  backdrop-blur-[10px] border-[1px] border-[#75757584] shadow-xl w-[65px] h-[65px] flex items-center justify-center rounded-[1000px]`}
         onClick={toggleDropdown}
       >
@@ -37,7 +38,7 @@ const NavbarPhone: React.FC = () => {
             <>
                 <div className="fixed inset-0 backdrop-blur-lg bg-opacity-50 z-10"></div>
                 <div className={`${bg_color} absolute top-full left-1/2 transform -translate-x-1/2 w-[90%] h-[50vh] rounded-[50px] shadow-lg mt-6 p-8 z-20 grid items-center justify-center`}>
-                    <button className="flex justify-end" onClick={toggleDropdown}> 
+                    <button name='btn-close-modal' className="flex justify-end" onClick={toggleDropdown}> 
                        <CustomText> <IconX stroke={3} /> </CustomText>
                     </button>
                     <Link to="hello" smooth={true} duration={500} offset={-150} className={css_btn()} onClick={()=>{setIsDropdownOpen(false)}} > HELLO </Link>
@@ -51,6 +52,7 @@ const NavbarPhone: React.FC = () => {
       </div>
       
       <button
+        name='btn-Darkmode-in-phone'
         className={`${bg_color}  backdrop-blur-[10px] border-[1px] border-[#75757584] shadow-xl w-[65px] h-[65px] flex items-center justify-center rounded-[1000px]`}
         onClick={() => setIsDarkMode(!isDarkMode)}
       >

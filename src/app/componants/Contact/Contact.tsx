@@ -30,12 +30,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-8 py-[5vw]">
-          <button className={CustomBTN} onClick={hendleClickEmail}>
+          <button name='btn-mail-in-contact' className={CustomBTN} onClick={hendleClickEmail}>
             <CustomText>
                 <IconMail stroke={1.5} size={100}/>
             </CustomText>
           </button>
-          <button className={CustomBTN} onClick={hendleClickIngedin}>
+          <button name='btn-linkedin-in-contact' className={CustomBTN} onClick={hendleClickIngedin}>
             <CustomText>
                 <IconBrandLinkedin stroke={1.5} size={100}/>
             </CustomText>

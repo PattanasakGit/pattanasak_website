@@ -50,8 +50,8 @@ function Carousel({ slides }: Props) {
           </SwiperSlide>
         ))}
         <div className="CarouselStyle_BTN">
-          <button className="button-prev ">{'<-'}</button>
-          <button className="button-next ">{'->'}</button>
+          <button name='Carousel-prev' className="button-prev ">{'<-'}</button>
+          <button name='Carousel-next' className="button-next ">{'->'}</button>
         </div>
       </Swiper>
     </div>

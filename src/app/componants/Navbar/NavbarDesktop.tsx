@@ -26,6 +26,7 @@ const NavbarDesktop: React.FC = () => {
       </div>
       
       <button
+        name='btn-Darkmode-in-Desktop'
         className={`${bg_color}  backdrop-blur-[10px] border-[1px] border-[#75757584] shadow-xl w-[65px] h-[65px] flex items-center justify-center rounded-[1000px]`}
         onClick={() => setIsDarkMode(!isDarkMode)}
       >

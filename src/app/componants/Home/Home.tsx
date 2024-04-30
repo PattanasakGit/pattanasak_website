@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           />
        </CustomText>
         <div className=" my-12"> 
-          <button className={CustomBTN} onClick={hendleClickGithub}>
+          <button name='btn-github-in-home' className={CustomBTN} onClick={hendleClickGithub}>
             <CustomText>
                 <IconBrandGithub stroke={2} size={45}/>  
             </CustomText>
