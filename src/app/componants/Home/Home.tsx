@@ -12,13 +12,13 @@ const Home: React.FC = () => {
     return (
       <div className=" w-full py-10 grid grid-cols-1 place-items-center place-content-start">
         <Image
-          src="/profile.jpg"
+          src="/profile.webp"
           alt="profile image"
           width={350}
           height={200}
-          className="rounded-[150px] mb-2"
+          className="rounded-[150px]"
         />
-        <TopicEffect className="my-8 text-[60px]"> I’m Pattanasak </TopicEffect>
+        <TopicEffect className="my-10 text-[60px]"> I’m Pattanasak </TopicEffect>
         <CustomText className="text-[30px] font-bold mb-4">
           <Typewriter
             text={['< Software developer >', '< Frontend developer >','< Fullstack developer >']}
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <div className=" my-12"> 
           <button className={CustomBTN} onClick={hendleClickGithub}>
             <CustomText>
-                <IconBrandGithub stroke={1.5} size={45}/>  
+                <IconBrandGithub stroke={2} size={45}/>  
             </CustomText>
           </button>
         </div>

@@ -27,8 +27,9 @@
 }
 
 .SwiperSlide-img {
-  width: fit-content !important;
-  height: 95% !important;
+  /* width: fit-content !important; */
+  /* height: 95% !important; */
+  max-height: 96%;
   display: block !important;
   object-fit: scale-down !important;
   border-radius: 10px !important;

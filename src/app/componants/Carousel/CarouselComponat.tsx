@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import Image from 'next/image'
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -16,7 +17,6 @@ function Carousel({ slides }: Props) {
     <div className="Carousel-Cover">
       <Swiper
         modules={[EffectCoverflow, Navigation, Pagination]}
-        // modules={[EffectCoverflow, Navigation]}
         navigation={{
           prevEl: ".button-prev",
           nextEl: ".button-next",
@@ -24,7 +24,7 @@ function Carousel({ slides }: Props) {
         pagination={{
           clickable: true,
         }}
-        speed={1000}
+        speed={300}
         slidesPerView={"auto"}
         loop={true}
         centeredSlides
@@ -34,12 +34,18 @@ function Carousel({ slides }: Props) {
           stretch: 0,
           depth: 50,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="slide-inner">
-            <img src={slide} alt="" className="SwiperSlide-img"/>
+            <Image
+              src={slide}
+              alt="My Image"
+              width={450}
+              height={300}
+              className="SwiperSlide-img"
+            />
           </SwiperSlide>
         ))}
         <div className="CarouselStyle_BTN">
