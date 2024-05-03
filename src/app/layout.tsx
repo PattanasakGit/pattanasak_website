@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./componants/Navbar/Navbar";
 import Footer from "./componants/Footer/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,11 @@ export const metadata: Metadata = {
     "developer website",
     "frontend developer",
     "software developer",
+    "frontend developer",
+    "Pattanasak Atakul",
     "web portfolio",
+    "web developer",
+    "Pattanasak",
     "portfolio",
     "resume",
     "cv",
@@ -31,6 +36,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         {children}
+        <Analytics />
         <Footer/>
       </body>
     </html>
