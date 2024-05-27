@@ -36,10 +36,10 @@ export const ProjectData:IProjectData = {
         name: 'AINBOX',
         description: 'ainbox is a platform that allows you to easily create your own AI chatbots. My role was to develop the front-end of the website, including the landing page and the platform website, using Next.js, React, TypeScript, and Tailwind.',
         images: [
-            '/project_img/AINBOX/0.webp',
-            '/project_img/AINBOX/1.webp',
-            '/project_img/AINBOX/2.webp',
-            '/project_img/AINBOX/3.webp',
+            '/project_img/Ainbox/0.webp',
+            '/project_img/Ainbox/1.webp',
+            '/project_img/Ainbox/2.webp',
+            '/project_img/Ainbox/3.webp',
         ],
         tools: [
             'Nextjs',

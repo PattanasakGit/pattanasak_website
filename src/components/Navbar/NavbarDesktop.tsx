@@ -10,7 +10,7 @@ const NavbarDesktop: React.FC = () => {
 
   const btnAction = () => {    
     const css_light_mode = "bg-[#B3C89055] p-3 rounded-[100px] cursor-pointer";
-    const css_dark_mode = "bg-[#B3C89055] p-3 rounded-[100px] text-white cursor-pointer";
+    const css_dark_mode = "bg-[#FF8A0880] p-3 rounded-[100px] text-white cursor-pointer";
     return isDarkMode ? css_dark_mode : css_light_mode;
   };
 
