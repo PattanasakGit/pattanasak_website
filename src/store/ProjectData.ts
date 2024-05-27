@@ -22,7 +22,7 @@ export const ProjectData:IProjectData = {
         tools: [
             'React',
             'Express',
-            'mongoDB',
+            'MongoDB',
             'Node',
             'TypeScript',
             'Firebase',
@@ -32,12 +32,29 @@ export const ProjectData:IProjectData = {
         ],
         github: "https://github.com/PattanasakGit/Final_Project"
     },
+    AINBOX:{
+        name: 'AINBOX',
+        description: 'ainbox is a platform that allows you to easily create your own AI chatbots. My role was to develop the front-end of the website, including the landing page and the platform website, using Next.js, React, TypeScript, and Tailwind.',
+        images: [
+            '/project_img/AINBOX/0.webp',
+            '/project_img/AINBOX/1.webp',
+            '/project_img/AINBOX/2.webp',
+            '/project_img/AINBOX/3.webp',
+        ],
+        tools: [
+            'Nextjs',
+            'TypeScript',
+            'Tailwind',
+            'Framer-motion',
+            'Netlify'
+        ],
+        github: "https://ainbox.netlify.app/"
+    },
     CATCHAT:{
         name: 'CATCHAT',
         description: 'CATCHAT is a website that allows you to chat with an AI. You can select different cat personas to converse with: Project for practice using the Next/Gemini API.',
         images: [
             '/project_img/CATCHAT/0.webp',
-            '/project_img/CATCHAT/cat.gif',
             '/project_img/CATCHAT/1.webp',
             '/project_img/CATCHAT/2.webp',
             '/project_img/CATCHAT/3.webp',
@@ -48,7 +65,7 @@ export const ProjectData:IProjectData = {
             'Nextjs',
             'TypeScript',
             'Tailwind',
-            'gemini api',
+            'Gemini api',
             'Netlify'
         ],
         github: "https://github.com/PattanasakGit/CatChat"
@@ -73,5 +90,6 @@ export const ProjectData:IProjectData = {
 };
 
 export const YakkaiData = ProjectData.YAKKAI;
+export const AINBOX = ProjectData.AINBOX;
 export const CatchatData = ProjectData.CATCHAT;
 export const HelpdeskData = ProjectData.HELPDESK;

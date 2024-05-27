@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
         window.open(Data.links.linkedin_url, "_blank");
     }
   return (
-    <div className="pt-3 p-8 rounded-[50px] w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4">
+    <section className=" p-8 lg:pb-[20vh] rounded-[50px] w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] mb-4 pt-16">
       <TopicEffect className="text-center md:text-left text-[35px] ">CONTACT</TopicEffect>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         <div className="flex justify-center items-center">
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

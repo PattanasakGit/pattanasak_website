@@ -27,12 +27,10 @@
 }
 
 .SwiperSlide-img {
-  /* width: fit-content !important; */
-  /* height: 95% !important; */
-  max-height: 96%;
+  /* max-height: 96%;
   display: block !important;
-  object-fit: scale-down !important;
-  border-radius: 10px !important;
+  object-fit: scale-down !important; */
+  border-radius: 5px !important;
 }
 
 .swiper-pagination-bullet-active {

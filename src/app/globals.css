@@ -2,17 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 body {
-  background-image: url('../../public/bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  /* white-space: pre-wrap !important; */
-  /* letter-spacing: -0.1em; */
-  /* font-family: "IBM Plex Sans Thai", sans-serif !important; */
-  /* font-family: "font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' " !important;  */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-gradient {
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff7e47, #ec8dff, #ff6666, #ffcc66);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 5s ease infinite;
 }

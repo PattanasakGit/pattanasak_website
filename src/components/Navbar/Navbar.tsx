@@ -13,8 +13,6 @@ const Navbar: React.FC = () => {
         <NavbarPhone />
       </div>
 
-      {/* w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] */}
-
     </>
   );
 };

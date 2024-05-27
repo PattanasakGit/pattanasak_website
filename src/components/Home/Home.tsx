@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         window.open("https://github.com/PattanasakGit", "_blank");
     }
     return (
-      <div className=" w-full py-10 grid grid-cols-1 place-items-center place-content-start">
+      <section className=" w-full py-10 mt-[13vh] grid grid-cols-1 place-items-center place-content-start">
         <Image
           src="/profile.webp"
           alt="profile image"
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
             </CustomText>
           </button>
         </div>
-      </div>
+      </section>
     );
 }
 export default Home;

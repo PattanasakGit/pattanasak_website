@@ -8,9 +8,15 @@ const NavbarDesktop: React.FC = () => {
   const bg_color = isDarkMode ? "bg-[#00000080] " : "bg-[#ffffff80] ";
   const text_color = isDarkMode ? "white" : "black";
 
+  const btnAction = () => {    
+    const css_light_mode = "bg-[#B3C89055] p-3 rounded-[100px] cursor-pointer";
+    const css_dark_mode = "bg-[#B3C89055] p-3 rounded-[100px] text-white cursor-pointer";
+    return isDarkMode ? css_dark_mode : css_light_mode;
+  };
+
   const css_btn = () => {    
-    const css_light_mode = "w-[20vw] text-center hover:bg-[#E8EFCF] p-3 rounded-[100px] cursor-pointer";
-    const css_dark_mode = "w-[20vw] text-center hover:bg-[#FFBB70] p-3 rounded-[100px] text-white cursor-pointer";
+    const css_light_mode = "mx-2 w-[20vw] text-[#333] text-center font-bold hover:text-orange-500 p-3 rounded-[100px] cursor-pointer";
+    const css_dark_mode = "mx-2 w-[20vw] text-[#fff] text-center font-bold hover:text-[#FFBF00] p-3 rounded-[100px] text-white cursor-pointer";
     return isDarkMode ? css_dark_mode : css_light_mode;
   };
 
@@ -18,11 +24,11 @@ const NavbarDesktop: React.FC = () => {
     <div className="h-[70px] flex justify-center items-center w-full mt-8 fixed top-0 z-[1000]">
       <img src={"avatar/twofing.gif"} alt="avatar" className={`${bg_color} backdrop-blur-[10px] border-[1px] border-[#75757584] shadow-xl w-[65px] h-[65px] rounded-[500px]`}/>
       <div className={`${bg_color} backdrop-blur-[10px] flex justify-between p-2 rounded-[100px] mx-8 border-[1px] border-[#75757584] shadow-xl w-[90%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:w-[50%]`} >
-        <Link to="hello" smooth={true} duration={500} offset={-150} className={css_btn()}> HELLO </Link>
-        <Link to="about" smooth={true} duration={500} offset={-150} className={css_btn()}> ABOUT ME </Link>
-        <Link to="projects" smooth={true} duration={500} offset={-150} className={css_btn()}> PROJECTS </Link>
-        <Link to="skills" smooth={true} duration={500} offset={-150} className={css_btn()}> SKILLS </Link>
-        <Link to="contact" smooth={true} duration={500} offset={-150} className={css_btn()}> CONTACT </Link>
+        <Link to="hello" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} ml-0`} activeClass={btnAction()}> HELLO </Link>
+        <Link to="about" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()}> ABOUT ME </Link>
+        <Link to="projects" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()}> PROJECTS </Link>
+        <Link to="skills" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()}> SKILLS </Link>
+        <Link to="contact" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} mr-0`} activeClass={btnAction()}> CONTACT </Link>
       </div>
       
       <button
