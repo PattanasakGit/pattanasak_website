@@ -1,7 +1,7 @@
 import React from 'react';
 import { TopicEffect } from '@/utils/ColorEffect';
 import ProjectSection from './ProjectSection';
-import { YakkaiData, CatchatData, HelpdeskData, AINBOX } from '@/store/ProjectData';
+import { YakkaiData, CatchatData, HelpdeskData, AINBOX, PokeDex } from '@/store/ProjectData';
 
 const Project: React.FC = () => {
   return (
@@ -10,6 +10,7 @@ const Project: React.FC = () => {
       <div className="mt-[50px]">
         <ProjectSection data={YakkaiData} />
         <ProjectSection data={AINBOX} />
+        <ProjectSection data={PokeDex} />
         <ProjectSection data={CatchatData} />
         <ProjectSection data={HelpdeskData} />
       </div>

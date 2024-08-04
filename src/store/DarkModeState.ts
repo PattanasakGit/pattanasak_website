@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
 export const useDarkModeState = create<IDarkModeState>(set => ({
-  isDarkMode: false,
+  isDarkMode: true,
   setIsDarkMode: (value) => set({ isDarkMode: value }),
 }));

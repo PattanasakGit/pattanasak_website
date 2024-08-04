@@ -50,6 +50,24 @@ export const ProjectData:IProjectData = {
         ],
         github: "https://ainbox.netlify.app/"
     },
+    PokeDex:{
+        name: 'PokeDex',
+        description: 'PokeDex is a project created to learn how to use Redux. This website can display Pokémon, allow users to search for and view Pokémon information, and add Pokémon to a cart (DEX)',
+        images: [
+            '/project_img/PokeDex/0.webp',
+            '/project_img/PokeDex/1.webp',
+            '/project_img/PokeDex/2.webp',
+            '/project_img/PokeDex/3.webp',
+        ],
+        tools: [
+            'Nextjs',
+            'TypeScript',
+            'Tailwind',
+            'Redux',
+            'Netlify'
+        ],
+        github: "https://pokedex-pattanasak.netlify.app/"
+    },
     CATCHAT:{
         name: 'CATCHAT',
         description: 'CATCHAT is a website that allows you to chat with an AI. You can select different cat personas to converse with: Project for practice using the Next/Gemini API.',
@@ -91,5 +109,6 @@ export const ProjectData:IProjectData = {
 
 export const YakkaiData = ProjectData.YAKKAI;
 export const AINBOX = ProjectData.AINBOX;
+export const PokeDex = ProjectData.PokeDex;
 export const CatchatData = ProjectData.CATCHAT;
 export const HelpdeskData = ProjectData.HELPDESK;
