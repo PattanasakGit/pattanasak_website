@@ -55,6 +55,7 @@ const NavbarPhone: React.FC = () => {
             <div className="flex flex-col items-center space-y-4 text-3xl font-semibold">
               <Link to="hello" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()} onClick={() => { setIsDropdownOpen(false)  }}>HELLO</Link>
               <Link to="about" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()} onClick={() => { setIsDropdownOpen(false) }}>ABOUT ME</Link>
+              <Link to="experiences" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()}> EXPERIENCES </Link>
               <Link to="projects" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()} onClick={() => { setIsDropdownOpen(false) }}>PROJECTS</Link>
               <Link to="skills" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()} onClick={() => { setIsDropdownOpen(false) }}>SKILLS</Link>
               <Link to="contact" spy={true} smooth={true} duration={500} offset={-150} className={css_btn()} activeClass={btnAction()} onClick={() => { setIsDropdownOpen(false) }}>CONTACT</Link>
