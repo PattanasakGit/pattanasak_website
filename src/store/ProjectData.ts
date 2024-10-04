@@ -50,6 +50,25 @@ export const ProjectData:IProjectData = {
         ],
         github: "https://ainbox.netlify.app/"
     },
+    JUSTBOOKMARKS:{
+        name: 'JUSTBOOKMARKS',
+        description: 'This project was created to address the limitations of existing bookmark management services on browser homepages, which often have limited configuration options. The goal is to provide a solution that works seamlessly across different devices and can easily be set as a browser homepage, offering a more flexible and customizable web-based experience.',
+        images: [
+            '/project_img/JustBookmarks/0.webp',
+            '/project_img/JustBookmarks/1.webp',
+            '/project_img/JustBookmarks/2.webp',
+            '/project_img/JustBookmarks/3.webp',
+            '/project_img/JustBookmarks/4.webp',
+            '/project_img/JustBookmarks/5.webp',
+        ],
+        tools: [
+            'Nextjs',
+            'TypeScript',
+            'Tailwind',
+            'Framer-motion',
+        ],
+        github: "https://github.com/PattanasakGit/just-bookmark"
+    },
     PokeDex:{
         name: 'PokeDex',
         description: 'PokeDex is a project created to learn how to use Redux. This website can display Pokémon, allow users to search for and view Pokémon information, and add Pokémon to a cart (DEX)',
@@ -112,3 +131,4 @@ export const AINBOX = ProjectData.AINBOX;
 export const PokeDex = ProjectData.PokeDex;
 export const CatchatData = ProjectData.CATCHAT;
 export const HelpdeskData = ProjectData.HELPDESK;
+export const JUSTBOOKMARKS = ProjectData.JUSTBOOKMARKS;
