@@ -31,3 +31,27 @@ body {
   color: transparent;
   animation: gradientShift 5s ease infinite;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background: #efff00; */
+  background: #3e3e3e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #efff00;
+}
+
+.bg-warning {
+  background-color: #efff00 !important;
+}

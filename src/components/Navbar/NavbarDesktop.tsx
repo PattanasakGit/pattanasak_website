@@ -23,9 +23,9 @@ const NavbarDesktop: React.FC = () => {
   return (
     <div className="h-[70px] flex justify-center items-center w-full mt-8 fixed top-0 z-[1000]">
       <img src={"avatar/twofing.gif"} alt="avatar" className={`${bg_color} backdrop-blur-[10px] border-[1px] border-[#75757584] shadow-xl w-[65px] h-[65px] rounded-[500px]`}/>
-      <div className={`${bg_color} backdrop-blur-[10px] flex justify-between p-2 rounded-[100px] mx-8 border-[1px] border-[#75757584] shadow-xl w-[90%] sm:w-[85%] md:w-[75%] lg:w-[70%] xl:w-[60%] md:text-[14px]`} >
+      <div className={`${bg_color} backdrop-blur-[10px] flex justify-between p-2 rounded-[100px] mx-8 border-[1px] border-[#75757584] shadow-xl w-[90%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[60%] md:text-[14px] lg:text-[18px]`} >
         <Link to="hello" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} ml-0 hidden xl:block`} activeClass={btnAction()}> HELLO </Link>
-        <Link to="about" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()}  ml-0 xl:ml-2`} activeClass={btnAction()}> ABOUT ME </Link>
+        <Link to="about" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()}  ml-0 xl:ml-2 truncate`} activeClass={btnAction()}> ABOUT ME </Link>
         <Link to="experiences" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} truncate`} activeClass={btnAction()}> EXPERIENCES </Link>
         <Link to="projects" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} `} activeClass={btnAction()}> PROJECTS </Link>
         <Link to="skills" spy={true} smooth={true} duration={500} offset={-150} className={`${css_btn()} `} activeClass={btnAction()}> SKILLS </Link>
