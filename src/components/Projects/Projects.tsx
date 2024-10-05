@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { TopicEffect } from '@/utils/ColorEffect';
 import ProjectSection from './ProjectSection';
 import { YakkaiData, CatchatData, HelpdeskData, AINBOX, PokeDex, JUSTBOOKMARKS } from '@/store/ProjectData';
 
 const Project: React.FC = () => {
-  const projects = [YakkaiData, AINBOX, JUSTBOOKMARKS, CatchatData, PokeDex, HelpdeskData];
+  const projects = useMemo(() => [YakkaiData, AINBOX, JUSTBOOKMARKS, CatchatData, PokeDex, HelpdeskData], []);
 
   return (
     <section className="pt-3 rounded-[50px] w-[90%] sm:w-[85%] md:w-[90%] lg:w-[65%] xl:w-[55%] my-4 overflow-x-hidden">
@@ -18,4 +18,4 @@ const Project: React.FC = () => {
   );
 };
 
-export default Project;
+export default React.memo(Project);
