@@ -7,12 +7,16 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./styles.css";
+import PreviewImageModal from "../PreviewImageModal";
+import React from "react";
+import { useShowImageModalState } from "@/store/ShowImageModalStage";
 
 interface Props { 
   slides: string[];
 }
 
 function Carousel({ slides }: Props) {
+  const { setIsOpenModal ,setImageUrl, } = useShowImageModalState();
   return (
     <div className="Carousel-Cover">
       <Swiper
@@ -45,10 +49,14 @@ function Carousel({ slides }: Props) {
               width={450}
               height={300}
               className="SwiperSlide-img"
-              onClick={()=>window.open(slide, '_blank') }
+              onClick={() => {
+                setIsOpenModal(true);
+                setImageUrl(slide);
+              }}
             />
           </SwiperSlide>
         ))}
+
         <div className="CarouselStyle_BTN">
           <button name='Carousel-prev' className="button-prev ">{'<-'}</button>
           <button name='Carousel-next' className="button-next ">{'->'}</button>

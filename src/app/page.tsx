@@ -7,8 +7,11 @@ import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
 import { Element } from "react-scroll";
 import Experiences from "@/components/Experiences/Experiences";
+import { useShowImageModalState } from "@/store/ShowImageModalStage";
+import PreviewImageModal from "@/components/PreviewImageModal";
 
 export default function APP() {
+  const { isOpenModal, imageUrl, onClose } = useShowImageModalState();
   const { isDarkMode } = useDarkModeState();
   const bg_image = isDarkMode
     ? "url('/bg-black.webp')"
@@ -48,6 +51,7 @@ export default function APP() {
           <Contact />
         </Element>
       </div>
+      <PreviewImageModal imgURL={imageUrl} isOpen={isOpenModal} closeModal={onClose}/>
     </main>
   );
 }
