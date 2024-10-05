@@ -1,12 +1,30 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PreviewImageModal: React.FC<{
-  imgURL: string;
+  imgURL: string[]; 
   isOpen: boolean;
   closeModal: () => void;
-}> = ({ imgURL, isOpen, closeModal }) => {
+  initialIndex: number;
+}> = ({ imgURL, isOpen, closeModal, initialIndex }) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(initialIndex);
+    }
+  }, [isOpen, initialIndex]);
+
+  const handleNextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % imgURL.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + imgURL.length) % imgURL.length);
+  };
 
   return (
     <AnimatePresence>
@@ -26,15 +44,27 @@ const PreviewImageModal: React.FC<{
             transition={{ duration: 0.2 }}
           >
             <img
-              src={imgURL}
+              src={imgURL[currentIndex]}
               alt="Preview"
-              className="max-w-[90%] max-h-[90%] object-contain rounded-xl w-[80dvw]"
+              className="max-w-[90%] max-h-[90%] object-contain rounded-sm md:rounded-xl w-[80dvw]"
             />
             <button
               onClick={closeModal}
               className="absolute top-10 right-10 z-50 text-yellow-400"
             >
               <IoIosCloseCircleOutline size={56} />
+            </button>
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-[-5px] md:left-10 z-50 text-white"
+            >
+              <FiChevronLeft size={36} />
+            </button>
+            <button
+              onClick={handleNextImage}
+              className="absolute right-[-5px] md:right-10 z-50 text-white"
+            >
+              <FiChevronRight size={36} />
             </button>
           </motion.div>
         </motion.div>

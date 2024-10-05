@@ -50,6 +50,26 @@ export const ProjectData:IProjectData = {
         ],
         github: "https://ainbox.netlify.app/"
     },
+    AiGenImages:{
+        name: 'AiGenImages',
+        description: 'AiGenimages is a project that allows users to import images to generate new images based on the prompts provided. I am responsible for developing the frontend and collaborating closely with the backend and AI development teams',
+        images: [
+            '/project_img/AigenImages/0.webp',
+            '/project_img/AigenImages/1.webp',
+            '/project_img/AigenImages/2.webp',
+            '/project_img/AigenImages/3.webp',
+            '/project_img/AigenImages/4.webp',
+            '/project_img/AigenImages/5.webp',
+        ],
+        tools: [
+            'Nextjs',
+            'TypeScript',
+            'Tailwind',
+            'Next UI',
+            'Framer-motion',
+        ],
+        github: "https://frontend-experta-ai.vercel.app/"
+    },
     JUSTBOOKMARKS:{
         name: 'JUSTBOOKMARKS',
         description: 'This project was created to address the limitations of existing bookmark management services on browser homepages, which often have limited configuration options. The goal is to provide a solution that works seamlessly across different devices and can easily be set as a browser homepage, offering a more flexible and customizable web-based experience.',
@@ -131,4 +151,5 @@ export const AINBOX = ProjectData.AINBOX;
 export const PokeDex = ProjectData.PokeDex;
 export const CatchatData = ProjectData.CATCHAT;
 export const HelpdeskData = ProjectData.HELPDESK;
+export const AiGenImages = ProjectData.AiGenImages;
 export const JUSTBOOKMARKS = ProjectData.JUSTBOOKMARKS;

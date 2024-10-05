@@ -7,7 +7,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./styles.css";
-import PreviewImageModal from "../PreviewImageModal";
 import React from "react";
 import { useShowImageModalState } from "@/store/ShowImageModalStage";
 
@@ -16,7 +15,7 @@ interface Props {
 }
 
 function Carousel({ slides }: Props) {
-  const { setIsOpenModal ,setImageUrl, } = useShowImageModalState();
+  const { setIsOpenModal ,setImageUrl, setInitialIndex } = useShowImageModalState();
   return (
     <div className="Carousel-Cover">
       <Swiper
@@ -50,8 +49,9 @@ function Carousel({ slides }: Props) {
               height={300}
               className="SwiperSlide-img"
               onClick={() => {
+                setInitialIndex(index);
+                setImageUrl(slides);
                 setIsOpenModal(true);
-                setImageUrl(slide);
               }}
             />
           </SwiperSlide>

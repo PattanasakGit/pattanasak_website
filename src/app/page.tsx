@@ -11,7 +11,7 @@ import { useShowImageModalState } from "@/store/ShowImageModalStage";
 import PreviewImageModal from "@/components/PreviewImageModal";
 
 export default function APP() {
-  const { isOpenModal, imageUrl, onClose } = useShowImageModalState();
+  const { isOpenModal, imageUrl, initialIndex, onClose } = useShowImageModalState();
   const { isDarkMode } = useDarkModeState();
   const bg_image = isDarkMode
     ? "url('/bg-black.webp')"
@@ -51,7 +51,7 @@ export default function APP() {
           <Contact />
         </Element>
       </div>
-      <PreviewImageModal imgURL={imageUrl} isOpen={isOpenModal} closeModal={onClose}/>
+      <PreviewImageModal imgURL={imageUrl} isOpen={isOpenModal} closeModal={onClose} initialIndex={initialIndex}/>
     </main>
   );
 }
