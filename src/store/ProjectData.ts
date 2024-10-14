@@ -70,6 +70,31 @@ export const ProjectData:IProjectData = {
         ],
         github: "https://frontend-experta-ai.vercel.app/"
     },
+    OXGAME:{
+        name: 'OXGAME',
+        description: `OX Game is a fun and interactive Tic Tac Toe web application developed using Next.js, TypeScript, and styled with Tailwind CSS. Players can choose to play as 'X' or 'O' against a bot that makes random moves. The game tracks scores, implements a winning system, and provides a seamless user experience.`,
+        images: [
+            '/project_img/OXGAME/0.webp',
+            '/project_img/OXGAME/1.webp',
+            '/project_img/OXGAME/2.webp',
+            '/project_img/OXGAME/3.webp',
+            '/project_img/OXGAME/4.webp',
+            '/project_img/OXGAME/5.webp',
+            '/project_img/OXGAME/6.webp',
+            '/project_img/OXGAME/7.webp',
+            '/project_img/OXGAME/8.webp',
+        ],
+        tools: [
+            'Nextjs',
+            'TypeScript',
+            'Tailwind',
+            'LottieFiles',
+            'Framer-motion',
+            'Zustand',
+            'Vercel',
+        ],
+        github: "https://github.com/PattanasakGit/OX-Projects"
+    },
     JUSTBOOKMARKS:{
         name: 'JUSTBOOKMARKS',
         description: 'This project was created to address the limitations of existing bookmark management services on browser homepages, which often have limited configuration options. The goal is to provide a solution that works seamlessly across different devices and can easily be set as a browser homepage, offering a more flexible and customizable web-based experience.',
@@ -148,6 +173,7 @@ export const ProjectData:IProjectData = {
 
 export const YakkaiData = ProjectData.YAKKAI;
 export const AINBOX = ProjectData.AINBOX;
+export const OXGAME = ProjectData.OXGAME;
 export const PokeDex = ProjectData.PokeDex;
 export const CatchatData = ProjectData.CATCHAT;
 export const HelpdeskData = ProjectData.HELPDESK;

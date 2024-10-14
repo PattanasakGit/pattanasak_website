@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  background-color: #000000;
 }
 
 @keyframes gradientShift {
