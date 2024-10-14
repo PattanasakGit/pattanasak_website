@@ -13,11 +13,11 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ data, index }) => {
 
   return (
     <motion.div
-      initial={{ x: direction, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ x: direction, opacity: 0, scale: 0.7 }}
+      whileInView={{ x: 0, opacity: 1, scale: 1 }}
       viewport={{ amount: 0.1 }}
-      transition={{ duration: 0.8 }}
-      className=" rounded-[50px] p-4 my-8 mx-2 border border-[#6565651d]"
+      transition={{ duration: 0.6 }}
+      className="rounded-[50px] p-4 my-8 mx-2 border border-[#6565651d]"
     >
       <Carousel slides={data.images} />
       <a href={data.github} target="_blank" rel="noopener noreferrer">
