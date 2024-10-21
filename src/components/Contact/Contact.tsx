@@ -1,16 +1,37 @@
-import React from "react";
-import { CustomText, TopicEffect } from "@/utils/ColorEffect";
-import { IconMail } from '@tabler/icons-react';
-import { IconBrandLinkedin } from '@tabler/icons-react';
+"use client";
+
 import Image from 'next/image'
 import { Data } from "@/store/Data";
+import React, { useEffect } from "react";
+import { IoMdCopy } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa6";
+import { LuFileCheck2 } from "react-icons/lu";
+import { FiExternalLink } from "react-icons/fi";
+import { CustomText, TopicEffect } from "@/utils/ColorEffect";
 
-const CustomBTN = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[50px] border border-[#c6af71] flex justify-center items-center shadow-2xl hover:scale-[1.1]'
+const ShowContact = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[45px] border border-[#c6af71] flex justify-center items-center shadow-2xl flex justify-between items-center'
 
 const Contact: React.FC = () => {
+    const [copied, setCopied] = React.useState(false);
+
+    useEffect(() => {
+      if (copied) {
+        setTimeout(() => {
+          setCopied(false);
+        }, 2000);
+      }
+    },[copied])
+
     const hendleClickEmail = () => {
-        window.open(Data.links.mail_url);
-    }
+      navigator.clipboard
+        .writeText("putjat145@gmail.com")
+        .then(() => {
+          setCopied(true);
+        })
+        .catch(() => {
+          setCopied(false);
+        });
+    };
     const hendleClickIngedin = () => {
         window.open(Data.links.linkedin_url, "_blank");
     }
@@ -29,17 +50,35 @@ const Contact: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-8 py-[5vw]">
-          <button name='btn-mail-in-contact' className={CustomBTN} onClick={hendleClickEmail}>
-            <CustomText>
-                <IconMail stroke={1.5} size={100}/>
+        <div className="flex flex-wrap items-center justify-center gap-8 py-[5vw] text-[20px]">
+          <div className={ShowContact}>
+            <CustomText className="text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
+              <MdEmail size={24}/> 
+              <span>: Putjat145@gmail.com</span>
             </CustomText>
-          </button>
-          <button name='btn-linkedin-in-contact' className={CustomBTN} onClick={hendleClickIngedin}>
-            <CustomText>
-                <IconBrandLinkedin stroke={1.5} size={100}/>
+            <button name='btn-mail-in-contact'  onClick={hendleClickEmail} className="ml-4 hover:scale-[1.3]">
+              <CustomText>
+                {copied 
+                  ?<LuFileCheck2 size={24}/>
+                  :<IoMdCopy size={24}/>
+                }
+                  
+              </CustomText>
+            </button>
+          </div>
+
+          <div className={ShowContact}>
+            <CustomText className="text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
+              <FaLinkedin size={24}/> 
+              <span>: Linkedin</span>
             </CustomText>
-          </button>
+            <button name='btn-mail-in-contact'  onClick={hendleClickIngedin} className="ml-4 hover:scale-[1.3]">
+              <CustomText>
+                  <FiExternalLink size={24}/>
+              </CustomText>
+            </button>
+          </div>
+
         </div>
       </div>
     </section>
