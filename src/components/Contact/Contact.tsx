@@ -10,7 +10,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { CustomText, TopicEffect } from "@/utils/ColorEffect";
 import { MdEmail } from 'react-icons/md';
 
-const ShowContact = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[45px] border border-[#c6af71] flex justify-center items-center shadow-2xl flex justify-between items-center'
+const ShowContact = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[45px] border border-[#c6af71] flex justify-center items-center shadow-2xl'
 
 const Contact: React.FC = () => {
     const [copied, setCopied] = React.useState(false);
@@ -51,11 +51,11 @@ const Contact: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-8 py-[5vw] text-[20px]">
+        <div className="w-full flex flex-wrap items-center justify-center gap-8 py-[5vw] text-[20px] ">
           <div className={ShowContact}>
-            <CustomText className="text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
+            <CustomText className="w-[90%] text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
               <MdEmail size={24}/> 
-              <span>: Putjat145@gmail.com</span>
+              <span className='w-full truncate text-start'>: Putjat145@gmail.com</span>
             </CustomText>
             <button name='btn-mail-in-contact'  onClick={hendleClickEmail} className="ml-4 hover:scale-[1.3]">
               <CustomText>
@@ -69,9 +69,9 @@ const Contact: React.FC = () => {
           </div>
 
           <div className={ShowContact}>
-            <CustomText className="text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
+            <CustomText className="w-[90%] text-[20px] font-semibold px-4 text-center flex justify-center items-center gap-2">
               <FaLinkedin size={24}/> 
-              <span>: Linkedin</span>
+              <span className='w-full truncate text-start'>: Linkedin</span>
             </CustomText>
             <button name='btn-mail-in-contact'  onClick={hendleClickIngedin} className="ml-4 hover:scale-[1.3]">
               <CustomText>
