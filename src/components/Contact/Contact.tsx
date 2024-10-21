@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { LuFileCheck2 } from "react-icons/lu";
 import { FiExternalLink } from "react-icons/fi";
 import { CustomText, TopicEffect } from "@/utils/ColorEffect";
+import { MdEmail } from 'react-icons/md';
 
 const ShowContact = 'w-full h-32 p-8 bg-[#ffffff22] rounded-[45px] border border-[#c6af71] flex justify-center items-center shadow-2xl flex justify-between items-center'
 
