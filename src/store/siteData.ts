@@ -97,6 +97,31 @@ export const CASES = [
 
 export const PROJ = [
   {
+    name: "Paenia Web", year: "2026", tag: "Side · Next.js",
+    images: [
+      "/project_img/PaeniaWeb/0.png",
+      "/project_img/PaeniaWeb/1.png",
+      "/project_img/PaeniaWeb/2.png",
+      "/project_img/PaeniaWeb/3.png",
+      "/project_img/PaeniaWeb/4.png",
+      "/project_img/PaeniaWeb/5.png",
+      "/project_img/PaeniaWeb/6.png",
+    ],
+    desc: "Landing page and download hub for the Paenia macOS app — built with Next.js App Router.",
+    stack: ["Next.js", "TypeScript", "React"],
+    link: "https://github.com/PattanasakGit/PaeniaWeb",
+  },
+  {
+    name: "Paenia", year: "2026", tag: "macOS App · Swift",
+    images: [
+      "/project_img/Paenia/6.png",
+      ...gi("Paenia", 6),
+    ],
+    desc: "Native macOS app with 78 presets for editing VS Code / Cursor theme colors — live preview, brace-safe patcher, auto-backup.",
+    stack: ["Swift", "SwiftUI", "macOS"],
+    link: "https://github.com/PattanasakGit/Paenia",
+  },
+  {
     name: "Yakkai Online", year: "2023", tag: "Final project · Full-stack",
     images: gi("Yakkai", 13, true),
     desc: "SUT community marketplace — sellers list, buyers contact directly. No transactions, no commission.",
@@ -104,18 +129,18 @@ export const PROJ = [
     link: "https://github.com/PattanasakGit/Final_Project",
   },
   {
-    name: "Ainbox", year: "2023", tag: "Client · Production",
-    images: gi("Ainbox", 4),
-    desc: "Platform for creating custom AI chatbots. Built landing page and full platform frontend.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    link: "https://ainbox.netlify.app/",
-  },
-  {
     name: "AiGenImages", year: "2023", tag: "Side · AI",
     images: gi("AigenImages", 6),
     desc: "AI image generation — import image, provide prompt, generate variations.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Next UI"],
     link: "https://frontend-experta-ai.vercel.app/",
+  },
+  {
+    name: "OX Game", year: "2023", tag: "Learning",
+    images: gi("OXGAME", 9),
+    desc: "Tic Tac Toe vs bot — score tracking, win detection, smooth animations.",
+    stack: ["Next.js", "TypeScript", "Redux", "Framer Motion"],
+    link: "https://github.com/PattanasakGit/OX-Projects",
   },
   {
     name: "JustBookmarks", year: "2023", tag: "Tool",
@@ -132,6 +157,13 @@ export const PROJ = [
     link: "https://pokedex-pattanasak.netlify.app/",
   },
   {
+    name: "Ainbox", year: "2023", tag: "Client · Production",
+    images: gi("Ainbox", 4),
+    desc: "Platform for creating custom AI chatbots. Built landing page and full platform frontend.",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    link: "https://ainbox.netlify.app/",
+  },
+  {
     name: "CatChat", year: "2023", tag: "Side · AI",
     images: gi("CATCHAT", 6),
     desc: "Chat with 5 cats of distinct personalities — powered by the Gemini API.",
@@ -139,43 +171,11 @@ export const PROJ = [
     link: "https://github.com/PattanasakGit/CatChat",
   },
   {
-    name: "OX Game", year: "2023", tag: "Learning",
-    images: gi("OXGAME", 9),
-    desc: "Tic Tac Toe vs bot — score tracking, win detection, smooth animations.",
-    stack: ["Next.js", "TypeScript", "Redux", "Framer Motion"],
-    link: "https://github.com/PattanasakGit/OX-Projects",
-  },
-  {
     name: "Helpdesk Ticket", year: "2023", tag: "Full-stack",
     images: gi("Ticket", 5),
     desc: "Full-stack ticket management for support and repair requests.",
     stack: ["React", "TypeScript", "Express"],
     link: "https://github.com/PattanasakGit/helpdesk_support_ticket_management_application",
-  },
-  {
-    name: "Paenia", year: "2026", tag: "macOS App · Swift",
-    images: [
-      "/project_img/Paenia/6.png",
-      ...gi("Paenia", 6),
-    ],
-    desc: "Native macOS app with 78 presets for editing VS Code / Cursor theme colors — live preview, brace-safe patcher, auto-backup.",
-    stack: ["Swift", "SwiftUI", "macOS"],
-    link: "https://github.com/PattanasakGit/Paenia",
-  },
-  {
-    name: "Paenia Web", year: "2025", tag: "Side · Next.js",
-    images: [
-      "/project_img/PaeniaWeb/0.png",
-      "/project_img/PaeniaWeb/1.png",
-      "/project_img/PaeniaWeb/2.png",
-      "/project_img/PaeniaWeb/3.png",
-      "/project_img/PaeniaWeb/4.png",
-      "/project_img/PaeniaWeb/5.png",
-      "/project_img/PaeniaWeb/6.png",
-    ],
-    desc: "Landing page and download hub for the Paenia macOS app — built with Next.js App Router.",
-    stack: ["Next.js", "TypeScript", "React"],
-    link: "https://github.com/PattanasakGit/PaeniaWeb",
   },
 ];
 
