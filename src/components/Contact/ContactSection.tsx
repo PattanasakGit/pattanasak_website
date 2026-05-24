@@ -26,9 +26,6 @@ const ContactSection: React.FC = () => (
           <Display size="lg" as="h2" className="contact-minimal__title">
             Let&apos;s build something useful<em className="acc">.</em>
           </Display>
-          <p className="contact-minimal__signoff mono">
-            <span className="contact-minimal__signoff-dot" /> Available for new projects
-          </p>
         </div>
         <div className="contact-minimal__card-col">
           <BusinessCardFlip />

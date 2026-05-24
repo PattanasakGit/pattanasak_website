@@ -206,7 +206,7 @@ export const STACK_CATEGORIES = [
   {
     index: "01", title: "Frontend", role: "Interface layer",
     desc: "Product surfaces, design-system components, and state that stays understandable.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Redux", "Zustand"],
+    tags: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind", "Ant Design", "Material UI", "Redux", "Zustand"],
   },
   {
     index: "02", title: "Backend", role: "Service layer",
@@ -221,7 +221,7 @@ export const STACK_CATEGORIES = [
   {
     index: "04", title: "Delivery", role: "Shipping layer",
     desc: "Git workflows, CI/CD, containers, and production deploy surfaces.",
-    tags: ["Git", "GitLab CI/CD", "Docker", "Vercel"],
+    tags: ["Agile", "Git", "GitLab CI/CD", "Docker", "Vercel"],
   },
   {
     index: "05", title: "AI workflow", role: "Acceleration layer",

@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
               </span>
               <span>Pattanasak Atakul</span>
               <span className="hero-status-dot-v4" />
-              <span>Bangkok based developer</span>
+              <span>Bangkok</span>
             </div>
 
             <h1 className="hero-title-v4">
