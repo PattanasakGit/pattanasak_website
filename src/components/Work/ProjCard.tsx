@@ -55,7 +55,7 @@ const ProjCard: React.FC<ProjCardProps> = ({ p, onOpen, showLink = false }) => {
             <span className="mono" style={{ position: "absolute", bottom: 8, right: 10, fontSize: 10, padding: "2px 7px", borderRadius: 999, ...overlayStyle }}>{ii + 1}/{p.images.length}</span>
           </>
         )}
-        <span className="mono" style={{ position: "absolute", top: 10, left: 10, fontSize: 10.5, padding: "2px 8px", borderRadius: 6, ...overlayStyle, fontWeight: 500, letterSpacing: "-0.005em" }}>{p.year}</span>
+        <span className="mono" style={{ position: "absolute", top: 10, left: 10, fontSize: 10.5, padding: "2px 8px", borderRadius: 6, background: "rgba(0,0,0,0.58)", color: "#ffffff", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", border: "1px solid rgba(255,255,255,0.12)", fontWeight: 500, letterSpacing: "-0.005em" }}>{p.year}</span>
       </div>
 
       {/* Content */}
