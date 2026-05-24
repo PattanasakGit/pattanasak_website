@@ -11,7 +11,7 @@ export const ME = {
 export const STATS = [
   { n: "70", sfx: "+", l: "Retail stores in production" },
   { n: "0",  sfx: "",  l: "Warehouse mismatches since launch" },
-  { n: "2",  sfx: "+", l: "Years shipping production code" },
+  { n: "~2", sfx: "",  l: "Years shipping production code" },
   { n: "11", sfx: "",  l: "Side projects shipped" },
 ];
 
