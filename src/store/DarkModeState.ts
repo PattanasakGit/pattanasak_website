@@ -7,8 +7,8 @@ interface IDarkModeState {
 }
 
 const getInitialDark = (): boolean => {
-  if (typeof window === "undefined") return false;
-  return document.documentElement.dataset.theme === "dark";
+  if (typeof window === "undefined") return true;
+  return document.documentElement.dataset.theme !== "light";
 };
 
 const applyTheme = (dark: boolean) => {
@@ -18,7 +18,7 @@ const applyTheme = (dark: boolean) => {
 };
 
 export const useDarkModeState = create<IDarkModeState>((set, get) => ({
-  isDarkMode: false,
+  isDarkMode: true,
   setIsDarkMode: (value: boolean) => {
     set({ isDarkMode: value });
     applyTheme(value);

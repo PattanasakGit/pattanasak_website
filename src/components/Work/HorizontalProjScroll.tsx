@@ -76,9 +76,9 @@ const HorizontalProjScroll: React.FC<HorizontalProjScrollProps> = ({ projects, o
 
         {/* Card rail */}
         <div ref={railRef} style={{ display: "flex", gap: CARD_GAP, alignItems: "stretch", paddingLeft: CARD_PAD, paddingTop: "clamp(72px, 9vh, 104px)", willChange: "transform" }}>
-          {projects.map(p => (
+          {projects.map((p, i) => (
             <div key={p.name} style={{ flexShrink: 0, width: CARD_W, display: "flex" }}>
-              <ProjCard p={p} onOpen={onOpen} />
+              <ProjCard p={p} onOpen={onOpen} showLink={i < 4} />
             </div>
           ))}
           <div style={{ flexShrink: 0, width: CARD_PAD }} />

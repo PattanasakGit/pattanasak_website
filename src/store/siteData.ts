@@ -122,13 +122,6 @@ export const PROJ = [
     link: "https://github.com/PattanasakGit/Paenia",
   },
   {
-    name: "Yakkai Online", year: "2023", tag: "Final project · Full-stack",
-    images: gi("Yakkai", 13, true),
-    desc: "SUT community marketplace — sellers list, buyers contact directly. No transactions, no commission.",
-    stack: ["React", "Express", "MongoDB", "TypeScript", "Firebase"],
-    link: "https://github.com/PattanasakGit/Final_Project",
-  },
-  {
     name: "Bexo", year: "2026", tag: "Side · Full-stack",
     images: [
       "/project_img/Bexo/01-short-link-home.avif",
@@ -146,6 +139,13 @@ export const PROJ = [
     desc: "Privacy-first short link and bio page builder — password-protected links, safe redirect preview, local history, and multi-language support.",
     stack: ["Next.js", "TypeScript", "Supabase", "Tailwind", "Vercel"],
     link: "https://bexo-project.vercel.app",
+  },
+  {
+    name: "Yakkai Online", year: "2023", tag: "Final project · Full-stack",
+    images: gi("Yakkai", 13, true),
+    desc: "SUT community marketplace — sellers list, buyers contact directly. No transactions, no commission.",
+    stack: ["React", "Express", "MongoDB", "TypeScript", "Firebase"],
+    link: "https://github.com/PattanasakGit/Final_Project",
   },
   {
     name: "AiGenImages", year: "2023", tag: "Side · AI",

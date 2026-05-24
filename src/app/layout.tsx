@@ -35,12 +35,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" className={`${ibmMono.variable} ${ibmSans.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" data-theme="dark" className={`${ibmMono.variable} ${ibmSans.variable} ${spaceGrotesk.variable}`}>
       <head>
         {/* Prevent dark mode flash by reading localStorage before React hydrates */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var s=localStorage.getItem("v3-theme");if(s){document.documentElement.dataset.theme=s;}else if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.dataset.theme="dark";}else{document.documentElement.dataset.theme="light";}}catch(e){}`,
+            __html: `try{var s=localStorage.getItem("v3-theme");if(s){document.documentElement.dataset.theme=s;}else{document.documentElement.dataset.theme="dark";}}catch(e){}`,
           }}
         />
       </head>

@@ -15,6 +15,7 @@ export interface ProjData {
 interface ProjCardProps {
   p: ProjData;
   onOpen: (images: string[], start: number) => void;
+  showLink?: boolean;
 }
 
 const overlayStyle: React.CSSProperties = {
@@ -25,7 +26,7 @@ const overlayStyle: React.CSSProperties = {
   WebkitBackdropFilter: "blur(8px)",
 };
 
-const ProjCard: React.FC<ProjCardProps> = ({ p, onOpen }) => {
+const ProjCard: React.FC<ProjCardProps> = ({ p, onOpen, showLink = false }) => {
   const [ii, setIi] = useState(0);
   const [hov, setHov] = useState(false);
   const has = p.images.length > 0;
@@ -67,7 +68,7 @@ const ProjCard: React.FC<ProjCardProps> = ({ p, onOpen }) => {
         <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginTop: 2, minHeight: 48, alignContent: "flex-start" }}>
           {p.stack.slice(0, 4).map(s => <TechToken key={s} name={s} variant="mini" />)}
         </div>
-        {p.link && (
+        {p.link && showLink && (
           <a href={p.link} target="_blank" rel="noreferrer" style={{ fontSize: 12.5, fontWeight: 500, color: "var(--t3)", display: "inline-flex", alignItems: "center", gap: 4, marginTop: "auto", transition: "color .15s" }}
             onMouseOver={e => e.currentTarget.style.color = "var(--accent)"}
             onMouseOut={e => e.currentTarget.style.color = "var(--t3)"}
