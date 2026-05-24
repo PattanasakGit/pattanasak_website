@@ -52,7 +52,7 @@ const ExperienceSection: React.FC = () => (
         </div>
 
         {/* Right: content */}
-        <div style={{ padding: "10px 14px 10px 0", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "10px 14px 10px 0", display: "flex", flexDirection: "column", minWidth: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
             <span style={{ width: 28, height: 28, borderRadius: 7, background: "var(--t1)", color: "var(--bg)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--f-mono)", fontWeight: 700, fontSize: 14, letterSpacing: "-0.04em" }}>{"</>"}</span>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 10px", borderRadius: 999, background: "var(--accent-soft)" }}>
