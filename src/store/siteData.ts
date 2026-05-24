@@ -5,7 +5,7 @@ export const ME = {
   email: "pattanasak.at@gmail.com",
   github: "https://github.com/PattanasakGit",
   linkedin: "https://www.linkedin.com/in/pattanasak-atakul-353025287/",
-  cvUrl: "https://drive.google.com/file/d/1vt-qGz3Nw48rAJUsQzzf5_qewuTKoTBP/view?usp=sharing",
+  cvUrl: "https://drive.google.com/file/d/1lvqhu_KpFkNGqO4KKAGFo4Hk-ZxyOXk7/view?usp=sharing",
 };
 
 export const STATS = [
