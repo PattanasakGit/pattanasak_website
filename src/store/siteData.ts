@@ -153,9 +153,10 @@ export const PROJ = [
     link: "https://github.com/PattanasakGit/helpdesk_support_ticket_management_application",
   },
   {
-    name: "Paenia", year: "2025", tag: "macOS App · Swift",
+    name: "Paenia", year: "2026", tag: "macOS App · Swift",
     images: [
-      ...gi("Paenia", 6, true),
+      "/project_img/Paenia/6.jpg",
+      ...gi("Paenia", 6),
     ],
     desc: "Native macOS app with 78 presets for editing VS Code / Cursor theme colors — live preview, brace-safe patcher, auto-backup.",
     stack: ["Swift", "SwiftUI", "macOS"],
