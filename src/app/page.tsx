@@ -1,57 +1,31 @@
 "use client";
-import Home from "@/components/Home/Home";
-import { useDarkModeState } from "@/store/DarkModeState";
-import AboutMe from "../components/AboutMe/AboutMe";
-import Contact from "../components/Contact/Contact";
-import Projects from "../components/Projects/Projects";
-import Skills from "../components/Skills/Skills";
-import { Element } from "react-scroll";
-import Experiences from "@/components/Experiences/Experiences";
-import { useShowImageModalState } from "@/store/ShowImageModalStage";
-import PreviewImageModal from "@/components/PreviewImageModal";
+import NavbarNew from "@/components/Navbar/NavbarNew";
+import HeroSection from "@/components/Hero/HeroSection";
+import WorkSection from "@/components/Work/WorkSection";
+import ExperienceSection from "@/components/Experience/ExperienceSection";
+import AboutSection from "@/components/About/AboutSection";
+import StackSection from "@/components/Stack/StackSection";
+import ContactSection from "@/components/Contact/ContactSection";
+import SignatureReveal from "@/components/SignatureReveal/SignatureReveal";
 
 export default function APP() {
-  const { isOpenModal, imageUrl, initialIndex, onClose } = useShowImageModalState();
-  const { isDarkMode } = useDarkModeState();
-  const bg_image = isDarkMode
-    ? "url('/bg-black.webp')"
-    : "url('/bg-white.webp')";
-  const ElementStyles = "w-full flex items-center justify-center my-16";
-  console.log = () => {};
-  console.warn = () => {};
-  console.error = () => {};
-
   return (
-    <main
-      style={{
-        backgroundImage: bg_image,
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-      }}
-    >
-      <div
-        className={`flex min-h-screen flex-col items-center justify-between backdrop-blur-[80px]`}
-      >
-        <Element name="hello" className={ElementStyles}>
-          <Home />
-        </Element>
-        <Element name="about" className={ElementStyles}>
-          <AboutMe />
-        </Element>
-        <Element name="experiences" className={ElementStyles}>
-          <Experiences />
-        </Element>
-        <Element name="projects" className={ElementStyles}>
-          <Projects />
-        </Element>
-        <Element name="skills" className={ElementStyles}>
-          <Skills />
-        </Element>
-        <Element name="contact" className={ElementStyles}>
-          <Contact />
-        </Element>
-      </div>
-      <PreviewImageModal imgURL={imageUrl} isOpen={isOpenModal} closeModal={onClose} initialIndex={initialIndex}/>
-    </main>
+    <>
+      <NavbarNew />
+      <div className="page-grid" aria-hidden="true" />
+      <main>
+        <HeroSection />
+        <div className="sec-divider" />
+        <WorkSection />
+        <div className="sec-divider" style={{ marginTop: "var(--sp-section)" }} />
+        <ExperienceSection />
+        <AboutSection />
+        <div className="sec-divider" style={{ marginTop: "var(--sp-section)" }} />
+        <StackSection />
+        <div className="sec-divider" style={{ marginTop: "var(--sp-section)" }} />
+        <ContactSection />
+        <SignatureReveal />
+      </main>
+    </>
   );
 }

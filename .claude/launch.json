@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Portfolio Website (Next.js dev)",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev"],
+      "port": 3000
+    },
+    {
+      "name": "Portfolio Website (Next.js prod)",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["start"],
+      "port": 3000
+    }
+  ]
+}
