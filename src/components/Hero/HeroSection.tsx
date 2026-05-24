@@ -1,13 +1,15 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import RevealWrapper from "@/components/shared/RevealWrapper";
 import { ME, STATS } from "@/store/siteData";
+
+const STAT_KEYS = ["stores", "quality", "runtime", "release"] as const;
 
 const HeroSection: React.FC = () => {
   const [photoErr, setPhotoErr] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
 
-  const moveLight = (event: React.MouseEvent) => {
+  const moveLight = useCallback((event: React.MouseEvent) => {
     const el = heroRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -17,7 +19,16 @@ const HeroSection: React.FC = () => {
     el.style.setProperty("--my", `${y.toFixed(2)}%`);
     el.style.setProperty("--tilt-x", `${((y - 50) / -32).toFixed(2)}deg`);
     el.style.setProperty("--tilt-y", `${((x - 50) / 36).toFixed(2)}deg`);
-  };
+  }, []);
+
+  const resetLight = useCallback(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    el.style.setProperty("--mx", "62%");
+    el.style.setProperty("--my", "34%");
+    el.style.setProperty("--tilt-x", "0deg");
+    el.style.setProperty("--tilt-y", "0deg");
+  }, []);
 
   return (
     <section
@@ -25,14 +36,7 @@ const HeroSection: React.FC = () => {
       ref={heroRef}
       className="hero-tech-v4"
       onMouseMove={moveLight}
-      onMouseLeave={() => {
-        const el = heroRef.current;
-        if (!el) return;
-        el.style.setProperty("--mx", "62%");
-        el.style.setProperty("--my", "34%");
-        el.style.setProperty("--tilt-x", "0deg");
-        el.style.setProperty("--tilt-y", "0deg");
-      }}
+      onMouseLeave={resetLight}
     >
       <div className="hero-shell-v4">
         {/* Left: copy */}
@@ -73,16 +77,13 @@ const HeroSection: React.FC = () => {
             </div>
             <div className="hero-console-body-v4">
               <div className="hero-command-v4 mono">$ ship --scope warehouse-flow</div>
-              {STATS.map(({ n, sfx, l }, idx) => {
-                const keys = ["stores", "quality", "runtime", "release"];
-                return (
-                  <div className="hero-metric-v4" key={idx}>
-                    <span className="mono">{keys[idx]}</span>
+              {STATS.map(({ n, sfx, l }, idx) => (
+                  <div className="hero-metric-v4" key={STAT_KEYS[idx]}>
+                    <span className="mono">{STAT_KEYS[idx]}</span>
                     <strong>{n}{sfx}</strong>
                     <small>{l}</small>
                   </div>
-                );
-              })}
+              ))}
             </div>
           </div>
         </RevealWrapper>

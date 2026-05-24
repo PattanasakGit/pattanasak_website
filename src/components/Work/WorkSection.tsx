@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import RevealWrapper from "@/components/shared/RevealWrapper";
 import Pill from "@/components/shared/Pill";
 import Display from "@/components/shared/Display";
@@ -9,6 +9,12 @@ import HorizontalProjScroll from "./HorizontalProjScroll";
 import { ME, CASES, PROJ } from "@/store/siteData";
 
 type WorkPreviewKind = "inventory" | "barcode" | "theme";
+
+const KIND_MAP: Record<string, WorkPreviewKind> = {
+  "inventory-pos": "inventory",
+  "match-barcode": "barcode",
+  "paenia": "theme",
+};
 
 const WorkPreview: React.FC<{ kind: WorkPreviewKind; images?: string[] }> = ({ kind, images = [] }) => {
   if (images.length > 0) {
@@ -45,12 +51,8 @@ const WorkPreview: React.FC<{ kind: WorkPreviewKind; images?: string[] }> = ({ k
 
 const WorkSection: React.FC = () => {
   const [modal, setModal] = useState<{ imgs: string[]; s: number } | null>(null);
-
-  const kindMap: Record<string, WorkPreviewKind> = {
-    "inventory-pos": "inventory",
-    "match-barcode": "barcode",
-    "paenia": "theme",
-  };
+  const openModal = useCallback((imgs: string[], s: number) => setModal({ imgs, s }), []);
+  const closeModal = useCallback(() => setModal(null), []);
 
   return (
     <section id="work" style={{ maxWidth: "var(--w)", margin: "0 auto", padding: "var(--sp-section) var(--gut) 0", position: "relative" }}>
@@ -75,7 +77,7 @@ const WorkSection: React.FC = () => {
           {CASES.map((c) => (
             <article key={c.id} className="card lift" style={{ padding: 18, display: "flex", flexDirection: "column", overflow: "hidden" }}>
               <div style={{ position: "relative", aspectRatio: "16/10", borderRadius: 10, overflow: "hidden", marginBottom: 22, background: "var(--bg2)" }}>
-                <WorkPreview kind={kindMap[c.id] || "theme"} images={c.images} />
+                <WorkPreview kind={KIND_MAP[c.id] || "theme"} images={c.images} />
                 <span className="mono" style={{ position: "absolute", top: 14, left: 14, fontSize: 11.5, color: c.id === "paenia" ? "rgba(255,255,255,0.85)" : "var(--t1)", fontWeight: 500, letterSpacing: "-0.01em", padding: "3px 9px", background: c.id === "paenia" ? "rgba(20,20,15,0.55)" : "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", borderRadius: 6 }}>{c.year}</span>
               </div>
               <div style={{ padding: "0 8px 6px" }}>
@@ -100,12 +102,12 @@ const WorkSection: React.FC = () => {
         <div style={{ marginTop: "clamp(56px, 7vw, 96px)", paddingTop: 40 }} className="stitch-top">
           <HorizontalProjScroll
             projects={PROJ}
-            onOpen={(imgs, s) => setModal({ imgs, s })}
+            onOpen={openModal}
           />
         </div>
       </RevealWrapper>
 
-      {modal && <Modal images={modal.imgs} start={modal.s} onClose={() => setModal(null)} />}
+      {modal && <Modal images={modal.imgs} start={modal.s} onClose={closeModal} />}
     </section>
   );
 };

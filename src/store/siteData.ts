@@ -152,6 +152,30 @@ export const PROJ = [
     stack: ["React", "TypeScript", "Express"],
     link: "https://github.com/PattanasakGit/helpdesk_support_ticket_management_application",
   },
+  {
+    name: "Paenia", year: "2025", tag: "macOS App · Swift",
+    images: [
+      ...gi("Paenia", 6, true),
+    ],
+    desc: "Native macOS app with 78 presets for editing VS Code / Cursor theme colors — live preview, brace-safe patcher, auto-backup.",
+    stack: ["Swift", "SwiftUI", "macOS"],
+    link: "https://github.com/PattanasakGit/Paenia",
+  },
+  {
+    name: "Paenia Web", year: "2025", tag: "Side · Next.js",
+    images: [
+      "/project_img/PaeniaWeb/0.png",
+      "/project_img/PaeniaWeb/1.png",
+      "/project_img/PaeniaWeb/2.png",
+      "/project_img/PaeniaWeb/3.png",
+      "/project_img/PaeniaWeb/4.png",
+      "/project_img/PaeniaWeb/5.png",
+      "/project_img/PaeniaWeb/6.png",
+    ],
+    desc: "Landing page and download hub for the Paenia macOS app — built with Next.js App Router.",
+    stack: ["Next.js", "TypeScript", "React"],
+    link: "https://github.com/PattanasakGit/PaeniaWeb",
+  },
 ];
 
 export const FEATURED_STACK_TAGS = [

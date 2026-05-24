@@ -3,14 +3,14 @@
   "configurations": [
     {
       "name": "Portfolio Website (Next.js dev)",
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["dev"],
+      "runtimeExecutable": "/Users/pattanasak/.nvm/versions/node/v23.1.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/next", "dev"],
       "port": 3000
     },
     {
       "name": "Portfolio Website (Next.js prod)",
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["start"],
+      "runtimeExecutable": "/Users/pattanasak/.nvm/versions/node/v23.1.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/next", "start"],
       "port": 3000
     }
   ]

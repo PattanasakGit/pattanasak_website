@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useDarkModeState } from "@/store/DarkModeState";
 import { ME } from "@/store/siteData";
 
@@ -10,6 +10,8 @@ const NAV = [
   { id: "stack", l: "stack" },
   { id: "contact", l: "contact" },
 ];
+
+const SPY_IDS = ["home", "work", "experience", "about", "stack", "contact"];
 
 const glassLight = {
   bg: "rgba(255, 255, 255, 0.72)",
@@ -22,48 +24,59 @@ const glassDark = {
   shadow: "0 1px 1px rgba(0,0,0,0.2), 0 8px 32px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(255,255,255,0.06) inset",
 };
 
-const useActiveSection = () => {
-  const [active, setActive] = useState("home");
-  useEffect(() => {
-    const ids = ["home", "work", "experience", "about", "stack", "contact"];
-    const onScroll = () => {
-      const y = window.scrollY + 140;
-      let cur = "home";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= y) cur = id;
-      }
-      setActive(cur);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return active;
-};
+const Divider: React.FC<{ dark: boolean }> = ({ dark }) => (
+  <span style={{ width: 1, height: 18, background: dark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.10)", borderRadius: 1, flexShrink: 0 }} />
+);
 
 const NavbarNew: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useDarkModeState();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const active = useActiveSection();
+  const [active, setActive] = useState("home");
   const g = isDarkMode ? glassDark : glassLight;
+  const positionsRef = useRef<number[]>([]);
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const els = SPY_IDS.map(id => document.getElementById(id));
+
+    const cachePositions = () => {
+      positionsRef.current = els.map(el => el?.offsetTop ?? 0);
+    };
+    cachePositions();
+    window.addEventListener("resize", cachePositions, { passive: true });
+
+    const tick = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      const spy = y + 140;
+      let cur = "home";
+      const pos = positionsRef.current;
+      for (let i = 0; i < pos.length; i++) {
+        if (pos[i] <= spy) cur = SPY_IDS[i];
+      }
+      setActive(cur);
+    };
+
+    const onScroll = () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    tick();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", cachePositions);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
-  const go = (id: string) => {
+  const go = useCallback((id: string) => {
     setOpen(false);
     const el = document.getElementById(id);
     if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
-  };
-
-  const Divider = () => (
-    <span style={{ width: 1, height: 18, background: isDarkMode ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.10)", borderRadius: 1, flexShrink: 0 }} />
-  );
+  }, []);
 
   return (
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 200, display: "flex", justifyContent: "center", padding: "16px var(--gut)", pointerEvents: "none" }}>
@@ -82,7 +95,7 @@ const NavbarNew: React.FC = () => {
           onMouseOut={e => { e.currentTarget.style.background = isDarkMode ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.08)"; e.currentTarget.style.transform = "scale(1)"; }}
         >Pa</button>
 
-        <Divider />
+        <Divider dark={isDarkMode} />
 
         <div style={{ display: "flex", alignItems: "center", gap: 2, padding: "0 6px" }}>
           {NAV.map(n => {
@@ -96,7 +109,7 @@ const NavbarNew: React.FC = () => {
           })}
         </div>
 
-        <Divider />
+        <Divider dark={isDarkMode} />
 
         <button onClick={toggleDarkMode} aria-label="Toggle theme" style={{ width: 36, height: 36, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: "var(--t2)", margin: "0 2px", transition: "background .2s, color .2s" }}
           onMouseOver={e => { e.currentTarget.style.background = isDarkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.06)"; e.currentTarget.style.color = "var(--t1)"; }}

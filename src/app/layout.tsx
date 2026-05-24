@@ -1,6 +1,26 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
+const ibmMono = IBM_Plex_Mono({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--f-mono",
+  display: "swap",
+});
+const ibmSans = IBM_Plex_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--f-sans",
+  display: "swap",
+});
+const spaceGrotesk = Space_Grotesk({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--f-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Pattanasak Atakul — Software Developer",
@@ -15,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className={`${ibmMono.variable} ${ibmSans.variable} ${spaceGrotesk.variable}`}>
       <head>
         {/* Prevent dark mode flash by reading localStorage before React hydrates */}
         <script

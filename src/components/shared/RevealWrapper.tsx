@@ -16,7 +16,12 @@ const RevealWrapper: React.FC<RevealWrapperProps> = ({ children, delay = 0, styl
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
       { threshold: 0.07 }
     );
     obs.observe(el);

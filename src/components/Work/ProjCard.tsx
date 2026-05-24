@@ -17,18 +17,18 @@ interface ProjCardProps {
   onOpen: (images: string[], start: number) => void;
 }
 
+const overlayStyle: React.CSSProperties = {
+  color: "var(--t1)",
+  background: "color-mix(in srgb, var(--paper) 92%, transparent)",
+  border: "1px solid color-mix(in srgb, var(--line) 82%, transparent)",
+  backdropFilter: "blur(8px)",
+  WebkitBackdropFilter: "blur(8px)",
+};
+
 const ProjCard: React.FC<ProjCardProps> = ({ p, onOpen }) => {
   const [ii, setIi] = useState(0);
   const [hov, setHov] = useState(false);
   const has = p.images.length > 0;
-
-  const overlayStyle: React.CSSProperties = {
-    color: "var(--t1)",
-    background: "color-mix(in srgb, var(--paper) 92%, transparent)",
-    border: "1px solid color-mix(in srgb, var(--line) 82%, transparent)",
-    backdropFilter: "blur(8px)",
-    WebkitBackdropFilter: "blur(8px)",
-  };
 
   return (
     <article
