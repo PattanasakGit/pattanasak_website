@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => (
                 ["Location",  "Bangkok, TH"],
                 ["Education", "B.Eng Computer\nEngineering · SUT"],
                 ["Now at",    "Zetta Soft\nDPLUS Intertrade"],
-                ["Focus",     "Full-stack systems\nReact · Go · SQL"],
+                ["Focus",     "Full-stack systems\nReact · Node · SQL"],
               ].map(([k, v], i) => (
                 <div key={k} style={{ paddingTop: 18, borderTop: "1px solid var(--line)" }}>
                   <p className="mono upper" style={{ fontSize: 10, fontWeight: 600, color: i === 2 ? "var(--accent)" : "var(--t3)", marginBottom: 10, letterSpacing: "0.16em" }}>{k}</p>

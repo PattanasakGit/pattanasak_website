@@ -12,7 +12,7 @@ export const STATS = [
   { n: "70", sfx: "+", l: "Retail stores in production" },
   { n: "0",  sfx: "",  l: "Warehouse mismatches since launch" },
   { n: "2",  sfx: "+", l: "Years shipping production code" },
-  { n: "9",  sfx: "",  l: "Projects shipped end-to-end" },
+  { n: "11", sfx: "",  l: "Side projects shipped" },
 ];
 
 export const EXP = [
