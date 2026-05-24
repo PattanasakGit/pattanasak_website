@@ -155,7 +155,7 @@ export const PROJ = [
   {
     name: "Paenia", year: "2026", tag: "macOS App · Swift",
     images: [
-      "/project_img/Paenia/6.jpg",
+      "/project_img/Paenia/6.png",
       ...gi("Paenia", 6),
     ],
     desc: "Native macOS app with 78 presets for editing VS Code / Cursor theme colors — live preview, brace-safe patcher, auto-backup.",
