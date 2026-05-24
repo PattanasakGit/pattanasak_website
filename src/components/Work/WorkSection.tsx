@@ -78,7 +78,7 @@ const WorkSection: React.FC = () => {
             <article key={c.id} className="card lift" style={{ padding: 18, display: "flex", flexDirection: "column", overflow: "hidden" }}>
               <div style={{ position: "relative", aspectRatio: "16/10", borderRadius: 10, overflow: "hidden", marginBottom: 22, background: "var(--bg2)" }}>
                 <WorkPreview kind={KIND_MAP[c.id] || "theme"} images={c.images} />
-                <span className="mono" style={{ position: "absolute", top: 14, left: 14, fontSize: 11.5, color: c.id === "paenia" ? "rgba(255,255,255,0.85)" : "var(--t1)", fontWeight: 500, letterSpacing: "-0.01em", padding: "3px 9px", background: c.id === "paenia" ? "rgba(20,20,15,0.55)" : "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", borderRadius: 6 }}>{c.year}</span>
+                <span className="mono" style={{ position: "absolute", top: 14, left: 14, fontSize: 11.5, color: "#ffffff", fontWeight: 500, letterSpacing: "-0.01em", padding: "3px 9px", background: "rgba(0,0,0,0.58)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6 }}>{c.year}</span>
               </div>
               <div style={{ padding: "0 8px 6px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>

@@ -11,7 +11,7 @@ export const ME = {
 export const STATS = [
   { n: "70", sfx: "+", l: "Retail stores in production" },
   { n: "0",  sfx: "",  l: "Warehouse mismatches since launch" },
-  { n: "~2", sfx: "",  l: "Years shipping production code" },
+  { n: "2", sfx: "",  l: "Year shipping production code" },
   { n: "11", sfx: "",  l: "Side projects shipped" },
 ];
 
@@ -64,7 +64,7 @@ export const CASES = [
     no: "01",
     name: "Inventory POS",
     kind: "Production system",
-    year: "2024 — Present",
+    year: "2026",
     company: "Zetta Soft × DPLUS",
     headline: "Maintained and shipped production POS workflows used across 70 retail branches.",
     stack: ["React", "TypeScript", "PostgreSQL", "REST", "Retail ops"],
@@ -75,7 +75,7 @@ export const CASES = [
     no: "02",
     name: "Match Barcode System",
     kind: "Internal product",
-    year: "2024",
+    year: "2026",
     company: "Zetta Soft × DPLUS",
     headline: "A scan-first warehouse verification system that reduced receiving mismatches to zero.",
     stack: ["Go", "React", "TypeScript", "MS SQL Server", "REST"],
